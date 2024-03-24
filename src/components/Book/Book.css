@@ -1,0 +1,23 @@
+.book__container {
+    margin: auto;
+    width: 60vw;
+    height: 100%;
+}
+
+.book__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--big-font-size);
+    color: rgb(10, 120, 211);
+}
+
+.book__contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    font-size: var(--normal-font-size);
+    color: black;
+}
