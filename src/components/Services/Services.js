@@ -8,9 +8,8 @@ const toggleTab = (index) => {
 };
 
   return (
-    <section className="services section" id="services">
-        <h2 className="section__title">Services</h2>
-        <span className="section__subtitle">We offer</span>
+    <section className="services section">
+        <h2 className="section__title">Our Services</h2>
 
         <div className="services__container container grid">
             <div className="services__content">

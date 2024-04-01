@@ -1,7 +1,6 @@
 .home__container {
     display: flex;
     flex-direction: column;
-    padding-top: 100px;
     margin: auto;
     width: auto;
     height: 100%;
@@ -44,7 +43,7 @@
     font-size: var(--small-font-size);
     color: black;
     font-weight: 600;
-    
+    margin: 5vh;
 }
 
 .home__create-log p {

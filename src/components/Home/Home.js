@@ -3,18 +3,18 @@ import './Home.css';
 
 const Home = () => {
   return (
-    <section className='home section' id='home'>
+    <section className='home section'>
         <div className='home__container container grid'>
             <div className='home__intro'>
-                <p>INTRODUCING WashHub</p>
+                INTRODUCING WashHub
             </div>
             <div className='home__tagline'>
-              <p>Always at your service!</p>
+              Always at your service!
             </div>
             <div className='home__content'>
-              <p>At Wash Hub, we aim to revolutionize motor care through our 
+              At Wash Hub, we aim to revolutionize motor care through our 
                 innovative site that make scheduling a motor wash effortless.
-                Join us for a cleaner, smoother ride!</p>
+                Join us for a cleaner, smoother ride!
             </div>
             <div className='home__create-log'>
               <button className='login'>Log In</button>

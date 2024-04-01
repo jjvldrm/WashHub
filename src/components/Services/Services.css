@@ -1,14 +1,16 @@
 .services__container {
-    grid-template-columns: repeat(2, 270px);
-    justify-content: center;
-    column-gap: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .services__content {
+    flex: 1;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--container-color);
     padding: 6rem 0 2rem 2.5rem;
+    margin-right: 1.8rem;
 }
 
 .services__icon {
@@ -122,12 +124,19 @@
 /* For large devices */
 @media screen and (max-width: 992px) {
     .services__container {
-        grid-template-columns: repeat(2, 218px);
+        flex-wrap: wrap; /* Wrap items to the next line on smaller screens */
+        justify-content: center; /* Center items on smaller screens */
     }
-  }
-  
-  /* For medium devices */
-  @media screen and (max-width: 768px) {
+
+    .services__content {
+        margin-right: 0; /* Remove margin on smaller screens */
+        margin-bottom: 1.8rem; /* Add margin at the bottom for spacing */
+        width: 100%; /* Ensure each service takes full width on smaller screens */
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
     .services__container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -139,9 +148,9 @@
     .services__icon {
         font-size: 1.5rem;
     }
-  }
-  
-  @media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 576px) {
     .services__modal-content {
         padding: 4.5rem 1.5rem 2.5rem;
     }
@@ -149,10 +158,10 @@
     .services__modal-description {
         padding: 0;
     }
-  }
-  
-  /* For small devices */
-  @media screen and (max-width: 350px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
     .services__container {
         grid-template-columns: max-content;
     }
@@ -160,5 +169,4 @@
     .services__content {
         padding-right: 6rem;
     }
-  }
-  
+}

@@ -1,0 +1,50 @@
+.book {
+    padding: 0 10rem;
+    text-align: center;
+}
+
+.book__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.book__content {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--container-color);
+    position: relative; /* Set position relative for containing the image */
+}
+
+.book__image {
+    width: 100%; /* Make the image occupy the whole width of the container */
+    height: 100px; /* Maintain aspect ratio */
+    position: relative; /* Position relative instead of absolute */
+    display: block; /* Ensure it behaves as a block element */
+    margin-bottom: 1rem; /* Add margin to separate from the content */
+    background-color: #00A36C; /* Background color for visualization */
+}
+
+.book__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.book__contents {
+    font-size: 1rem;
+    padding: 0 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.book__content button {
+    background-color: #00A36C;
+    padding: 10px;
+    margin-bottom: 2rem;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .book__container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    }
+}
