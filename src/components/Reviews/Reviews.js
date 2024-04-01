@@ -6,7 +6,7 @@ const Reviews = () => {
         <section className='reviews section'>
             <div className="reviews__container grid">
                 <div className="reviews__title">
-                    Reviews
+                    Customer Reviews
                 </div>
                 <div className="reviews__contents">
                     <p >

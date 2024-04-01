@@ -4,18 +4,65 @@ import './Book.css';
 const Book = () => {
     return (
         <section className='book section'>
+            <div>
+                <h1>Our Services</h1>
+            </div>
+
             <div className="book__container grid">
-                <div className="book__title">
-                Book
+                <div className="book__content">
+                    <img src="#" alt="Service 1" className="book__image" />
+                    <div className="book__title">
+                        Service 1
+                    </div>
+                    <div className="book__contents">
+                        <div>
+                            1 hr
+                        </div>
+                        <div>
+                            Php500
+                        </div>
+                    </div>
+                    <button>Book Now</button>
                 </div>
-                <div className="book__contents">
-                    <p >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
-                    </p>
+
+                <div className="book__content">
+                    <img src="#" alt="Service 2" className="book__image" />
+                    <div className="book__title">
+                        Service 2
+                    </div>
+                    <div className="book__contents">
+                    <div className="book__contents">
+                        <div>
+                            1 hr
+                        </div>
+                        <div>
+                            Php1,000
+                        </div>
+                    </div>
+                    </div>
+                    <button>Book Now</button>
+                </div>
+
+                <div className="book__content">
+                    <img src="#" alt="Service 3" className="book__image" />
+                    <div className="book__title">
+                        Service 3
+                    </div>
+                    <div className="book__contents">
+                    <div className="book__contents">
+                        <div>
+                            1 hr
+                        </div>
+                        <div>
+                            Php700
+                        </div>
+                    </div>
+                    </div>
+                    <button>Book Now</button>
                 </div>
             </div>
         </section>
     )
 }
 
-export default Book
+export default Book;
