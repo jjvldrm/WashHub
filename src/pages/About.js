@@ -1,14 +1,14 @@
 import React from 'react';
-import './Reviews.css';
+import '../components/About/About.css';
 
-const Reviews = () => {
+const About = () => {
     return (
-        <section className='reviews section'>
-            <div className="reviews__container grid">
-                <div className="reviews__title">
-                    Customer Reviews
+        <section className='about section'>
+            <div className="about__container grid">
+                <div className="about__title">
+                    A BIT ABOUT US
                 </div>
-                <div className="reviews__contents">
+                <div className="about__contents">
                     <p >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
                     </p>
@@ -18,4 +18,4 @@ const Reviews = () => {
     )
 }
 
-export default Reviews
+export default About

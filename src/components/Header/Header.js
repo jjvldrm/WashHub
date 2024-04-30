@@ -11,13 +11,13 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${location.pathname !== '/' && 'scroll-header'}`}>
-      <div>
-        <Link to="/" className="nav__logo">
+    <header className={`w-100 bg-white ${location.pathname !== '/' && 'scroll-header'}`}>
+      <div className='d-flex align-items-center justify-content-center fs-1 fw-semi-bold'>
+        <Link to="/">
           WashHub
         </Link>
       </div>
-      <nav className="nav container grid">
+      <nav className="d-flex justify-content-center">
         <div className={`nav__menu ${toggle && 'show-menu'}`}>
           <ul className="nav__list grid">
             <li className="nav__item">
@@ -27,15 +27,6 @@ const Header = () => {
                 className={`nav__link ${location.pathname === '/' && 'active-link'}`}
               >
                 <i className="uil uil-estate nav__icon"></i> Home
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link
-                to="/about"
-                onClick={handleToggle}
-                className={`nav__link ${location.pathname === '/about' && 'active-link'}`}
-              >
-                <i className="uil uil-user nav__icon"></i> About
               </Link>
             </li>
             <li className="nav__item">
@@ -63,6 +54,15 @@ const Header = () => {
                 className={`nav__link ${location.pathname === '/reviews' && 'active-link'}`}
               >
                 <i className="uil uil-message nav__icon"></i> Reviews
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link
+                to="/about"
+                onClick={handleToggle}
+                className={`nav__link ${location.pathname === '/about' && 'active-link'}`}
+              >
+                <i className="uil uil-user nav__icon"></i> About
               </Link>
             </li>
           </ul>
