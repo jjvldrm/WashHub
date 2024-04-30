@@ -10,7 +10,9 @@ const Services = () => {
 
     return (
         <section className="mt-5">
-            <h2 className="fs-2 mb-4 fw-medium text-center">Our Services</h2>
+            <h1 className="mb-4 fw-medium text-center">
+                Our Services
+            </h1>
 
             <div className="d-flex justify-content-between align-items-start mx-5">
 
