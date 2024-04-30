@@ -6,9 +6,11 @@ import LandingServicesList from '../components/LandingPageComponents/LandingServ
 export default function LandingPage() {
   return (
     <div>
-      <div className='h-100 bg-black bg-with-image'>
+      <div className='vh-100 w-100 flex-column justify-content-center bg-with-image'>
         <Header />
-        <LandingTitle />
+        <div>
+          <LandingTitle />
+        </div>
       </div>
       <LandingServicesList />
     </div>
