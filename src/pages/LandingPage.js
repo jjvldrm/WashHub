@@ -8,7 +8,7 @@ export default function LandingPage() {
     <div>
       <div className='vh-100 w-100 flex-column justify-content-center bg-with-image'>
         <Header />
-        <div>
+        <div className='d-flex flex-column justify-content-center '  style={{height: 'calc(100% - 75px)'}}>
           <LandingTitle />
         </div>
       </div>

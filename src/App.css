@@ -4,14 +4,39 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+.pointer{
+  cursor: "pointer";
+}
+
 .bg-with-image {
   position: relative;
-  background-image: url("assets/carwashBg.jpg");
+  background-image: url("./assets/carwashBg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .LandingPage{
-    position: relative;
     z-index: 2;
+}
+
+.line-before-after {
+  position: relative;
+}
+
+.line-before-after::before,
+.line-before-after::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: white;
+}
+
+.line-before-after::before {
+  top: -5px;
+}
+
+.line-before-after::after {
+  bottom: -5px;
 }

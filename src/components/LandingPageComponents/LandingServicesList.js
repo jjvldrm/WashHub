@@ -7,28 +7,42 @@ export default function LandingServicesList() {
                 WASHING SERVICES
             </div>
             <div className='mx-5'>
+
                 <nav>
                     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
-                            Home
+                        <button class="nav-link active" id="nav-carwash-tab" data-bs-toggle="tab" data-bs-target="#nav-carwash" type="button" role="tab" aria-controls="nav-carwash" aria-selected="true">
+                            Car Wash
                         </button>
-                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-                            Profile
+                        <button class="nav-link" id="nav-detailing-tab" data-bs-toggle="tab" data-bs-target="#nav-detailing" type="button" role="tab" aria-controls="nav-detailing" aria-selected="false">
+                            Detailing
                         </button>
-                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-                            Contact
+                        <button class="nav-link" id="nav-buffing-tab" data-bs-toggle="tab" data-bs-target="#nav-buffing" type="button" role="tab" aria-controls="nav-buffing" aria-selected="false">
+                            Buffing
+                        </button>
+                        <button class="nav-link" id="nav-waxing-tab" data-bs-toggle="tab" data-bs-target="#nav-waxing" type="button" role="tab" aria-controls="nav-waxing" aria-selected="false">
+                            Waxing
+                        </button>
+                        <button class="nav-link" id="nav-deepclean-tab" data-bs-toggle="tab" data-bs-target="#nav-deepclean" type="button" role="tab" aria-controls="nav-deepclean" aria-selected="false">
+                            Deep Clean
                         </button>
                     </div>
                 </nav>
+
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        Home
+                    <div class="tab-pane fade show active" id="nav-carwash" role="tabpanel" aria-labelledby="nav-carwash-tab">
+                    Car Wash
                     </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        Profile
+                    <div class="tab-pane fade" id="nav-detailing" role="tabpanel" aria-labelledby="nav-detailing-tab">
+                    Detailing
                     </div>
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        Contact
+                    <div class="tab-pane fade" id="nav-buffing" role="tabpanel" aria-labelledby="nav-buffing-tab">
+                    Buffing
+                    </div>
+                    <div class="tab-pane fade" id="nav-waxing" role="tabpanel" aria-labelledby="nav-waxing-tab">
+                    Waxing
+                    </div>
+                    <div class="tab-pane fade" id="nav-deepclean" role="tabpanel" aria-labelledby="nav-deepclean-tab">
+                    Deep Clean
                     </div>
                 </div>
             </div>
