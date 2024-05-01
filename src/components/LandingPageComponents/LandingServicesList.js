@@ -1,11 +1,30 @@
 import React from 'react';
 import carwashImage from '../../assets/carwashService.jpg';
-import carwashIcone from '../../assets/carwashIcon.png';
-import detailingImage from '../../assets/detailingService.jpg';
-import detailingIcon from '../../assets/detailingIcon.png';
-import buffingImage from '../../assets/buffingService.jpg';
-import waxingImage from '../../assets/waxingService.jpg';
-import deepCleanImage from '../../assets/deepCleanService.jpg';
+import carwashIcon from '../../assets/carwashIcon.png';
+
+import ceramicCoatingService from '../../assets/ceramicCoatingService.jpg';
+import ceramicCoatingIcon from '../../assets/ceramicCoatingIcon.png';
+
+import undercoatingService from '../../assets/undercoatingService.jpg';
+import undercoatingIcon from '../../assets/undercoatingIcon.png';
+
+import interiorDetailingService from '../../assets/interiorDetailingService.jpg';
+import interiorDetailingIcon from '../../assets/interiorDetailingIcon.png';
+
+import exteriorDetailingService from '../../assets/exteriorDetailingService.jpg';
+import exteriorDetailingIcon from '../../assets/exteriorDetailingIcon.png';
+
+import engineWashService from '../../assets/engineWashService.jpg';
+import engineWashIcon from '../../assets/engineWashIcon.png';
+
+import disinfectionSanitationService from '../../assets/disinfectionSanitationService.jpg';
+import disinfectionSanitationIcon from '../../assets/disinfectionSanitationIcon.png';
+
+import waxingService from '../../assets/waxingService.jpg';
+import waxingIcon from '../../assets/waxingIcon.png';
+
+import asphaltRemovalService from '../../assets/asphaltRemovalService.jpg';
+import asphaltRemovalIcon from '../../assets/asphaltRemovalIcon.png';
 import { Col, Row } from 'react-bootstrap';
 
 export default function LandingServicesList() {
@@ -19,37 +38,58 @@ export default function LandingServicesList() {
                 <nav>
                     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
                         <button class="nav-link active" id="nav-carwash-tab" data-bs-toggle="tab" data-bs-target="#nav-carwash" type="button" role="tab" aria-controls="nav-carwash" aria-selected="true">
-                            <img src={carwashIcone} width={"50px"} />
+                            <img src={carwashIcon} width={"50px"} />
                             <div>
                                 Car Wash
                             </div>
                         </button>
                         <button class="nav-link" id="nav-ceramicCoating-tab" data-bs-toggle="tab" data-bs-target="#nav-ceramicCoating" type="button" role="tab" aria-controls="nav-ceramicCoating" aria-selected="false">
-                            <img src={detailingIcon} width={"50px"} />
+                            <img src={ceramicCoatingIcon} width={"50px"} />
                             <div>
                                 Ceramic Coating
                             </div>
                         </button>
                         <button class="nav-link" id="nav-undercoating-tab" data-bs-toggle="tab" data-bs-target="#nav-undercoating" type="button" role="tab" aria-controls="nav-undercoating" aria-selected="false">
-                            Undercoating
+                            <img src={undercoatingIcon} width={"50px"} />
+                            <div>
+                                Undercoating
+                            </div>
                         </button>
                         <button class="nav-link" id="nav-interiorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-interiorDetailing" type="button" role="tab" aria-controls="nav-interiorDetailing" aria-selected="false">
-                            Interior Detailing
+                            <img src={interiorDetailingIcon} width={"50px"} />
+                            <div>
+                                Interior Detailing
+                            </div>
                         </button>
                         <button class="nav-link" id="nav-exteriorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-exteriorDetailing" type="button" role="tab" aria-controls="nav-exteriorDetailing" aria-selected="false">
-                            Exterior Detailing
+                            <img src={exteriorDetailingIcon} width={"50px"} />
+                            <div>
+                                Exterior Detailing
+                            </div>
                         </button>
                         <button class="nav-link" id="nav-engineWash-tab" data-bs-toggle="tab" data-bs-target="#nav-engineWash" type="button" role="tab" aria-controls="nav-engineWash" aria-selected="false">
-                            Engine Wash
+                            <img src={engineWashIcon} width={"50px"} />
+                            <div>
+                                Engine Wash
+                            </div>
                         </button>
                         <button class="nav-link" id="nav-disinfectionSanitation-tab" data-bs-toggle="tab" data-bs-target="#nav-disinfectionSanitation" type="button" role="tab" aria-controls="nav-disinfectionSanitation" aria-selected="false">
-                            Disinfection/Sanitation
+                            <img src={disinfectionSanitationIcon} width={"50px"} />
+                            <div>
+                                Disinfection/Sanitation
+                            </div>
                         </button>
                         <button class="nav-link" id="nav-waxing-tab" data-bs-toggle="tab" data-bs-target="#nav-waxing" type="button" role="tab" aria-controls="nav-waxing" aria-selected="false">
-                            Waxing
+                            <img src={waxingIcon} width={"50px"} />
+                            <div>
+                                Waxing
+                            </div>
                         </button>
                         <button class="nav-link" id="nav-asphaltRemoval-tab" data-bs-toggle="tab" data-bs-target="#nav-asphaltRemoval" type="button" role="tab" aria-controls="nav-asphaltRemoval" aria-selected="false">
-                            Asphalt Removal
+                            <img src={asphaltRemovalIcon} width={"50px"} />
+                            <div>
+                                Asphalt Removal
+                            </div>
                         </button>
                     </div>
                 </nav>
@@ -74,7 +114,7 @@ export default function LandingServicesList() {
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={detailingImage} alt="Ceramic Coating Service" className='w-100' />
+                                    <img src={ceramicCoatingService} alt="Ceramic Coating Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
@@ -89,7 +129,7 @@ export default function LandingServicesList() {
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={buffingImage} alt="Undercoating Service" className='w-100' />
+                                    <img src={undercoatingService} alt="Undercoating Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
@@ -104,7 +144,7 @@ export default function LandingServicesList() {
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={waxingImage} alt="Interior Detailing Service" className='w-100' />
+                                    <img src={interiorDetailingService} alt="Interior Detailing Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
@@ -119,7 +159,7 @@ export default function LandingServicesList() {
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={deepCleanImage} alt="Exterior Detailing Service" className='w-100' />
+                                    <img src={exteriorDetailingService} alt="Exterior Detailing Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
@@ -134,7 +174,7 @@ export default function LandingServicesList() {
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={deepCleanImage} alt="Engine Wash Service" className='w-100' />
+                                    <img src={engineWashService} alt="Engine Wash Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
@@ -149,7 +189,7 @@ export default function LandingServicesList() {
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={deepCleanImage} alt="Disinfection Sanitation Service" className='w-100' />
+                                    <img src={disinfectionSanitationService} alt="Disinfection Sanitation Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
@@ -164,7 +204,7 @@ export default function LandingServicesList() {
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={deepCleanImage} alt="Waxing Service" className='w-100' />
+                                    <img src={waxingService} alt="Waxing Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
@@ -179,7 +219,7 @@ export default function LandingServicesList() {
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={deepCleanImage} alt="Asphalt Removal Service" className='w-100' />
+                                    <img src={asphaltRemovalService} alt="Asphalt Removal Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
