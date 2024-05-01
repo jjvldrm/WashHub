@@ -1,3 +1,8 @@
+:root{
+  --primary-color: #198754;
+  --primary: #198754;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -8,9 +13,17 @@ html {
   cursor: "pointer";
 }
 
-.bg-with-image {
+.landingPage-bg-with-image {
   position: relative;
   background-image: url("./assets/carwashBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.servicePage-bg-with-image {
+  height: 100%;
+  position: relative;
+  background-image: url("./assets/ServiceBg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

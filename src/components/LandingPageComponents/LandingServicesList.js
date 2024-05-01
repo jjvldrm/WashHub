@@ -37,55 +37,55 @@ export default function LandingServicesList() {
 
                 <nav>
                     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-carwash-tab" data-bs-toggle="tab" data-bs-target="#nav-carwash" type="button" role="tab" aria-controls="nav-carwash" aria-selected="true">
+                        <button class="nav-link active" style={{width: '160px'}} id="nav-carwash-tab" data-bs-toggle="tab" data-bs-target="#nav-carwash" type="button" role="tab" aria-controls="nav-carwash" aria-selected="true">
                             <img src={carwashIcon} width={"50px"} />
                             <div>
                                 Car Wash
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-ceramicCoating-tab" data-bs-toggle="tab" data-bs-target="#nav-ceramicCoating" type="button" role="tab" aria-controls="nav-ceramicCoating" aria-selected="false">
+                        <button class="nav-link" style={{width: '160px'}} id="nav-ceramicCoating-tab" data-bs-toggle="tab" data-bs-target="#nav-ceramicCoating" type="button" role="tab" aria-controls="nav-ceramicCoating" aria-selected="false">
                             <img src={ceramicCoatingIcon} width={"50px"} />
                             <div>
                                 Ceramic Coating
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-undercoating-tab" data-bs-toggle="tab" data-bs-target="#nav-undercoating" type="button" role="tab" aria-controls="nav-undercoating" aria-selected="false">
+                        <button class="nav-link" style={{width: '160px'}} id="nav-undercoating-tab" data-bs-toggle="tab" data-bs-target="#nav-undercoating" type="button" role="tab" aria-controls="nav-undercoating" aria-selected="false">
                             <img src={undercoatingIcon} width={"50px"} />
                             <div>
                                 Undercoating
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-interiorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-interiorDetailing" type="button" role="tab" aria-controls="nav-interiorDetailing" aria-selected="false">
+                        <button class="nav-link" style={{width: '160px'}} id="nav-interiorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-interiorDetailing" type="button" role="tab" aria-controls="nav-interiorDetailing" aria-selected="false">
                             <img src={interiorDetailingIcon} width={"50px"} />
                             <div>
                                 Interior Detailing
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-exteriorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-exteriorDetailing" type="button" role="tab" aria-controls="nav-exteriorDetailing" aria-selected="false">
+                        <button class="nav-link" style={{width: '160px'}} id="nav-exteriorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-exteriorDetailing" type="button" role="tab" aria-controls="nav-exteriorDetailing" aria-selected="false">
                             <img src={exteriorDetailingIcon} width={"50px"} />
                             <div>
                                 Exterior Detailing
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-engineWash-tab" data-bs-toggle="tab" data-bs-target="#nav-engineWash" type="button" role="tab" aria-controls="nav-engineWash" aria-selected="false">
+                        <button class="nav-link" style={{width: '160px'}} id="nav-engineWash-tab" data-bs-toggle="tab" data-bs-target="#nav-engineWash" type="button" role="tab" aria-controls="nav-engineWash" aria-selected="false">
                             <img src={engineWashIcon} width={"50px"} />
                             <div>
                                 Engine Wash
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-disinfectionSanitation-tab" data-bs-toggle="tab" data-bs-target="#nav-disinfectionSanitation" type="button" role="tab" aria-controls="nav-disinfectionSanitation" aria-selected="false">
+                        <button class="nav-link" style={{width: '160px'}} id="nav-sanitation-tab" data-bs-toggle="tab" data-bs-target="#nav-sanitation" type="button" role="tab" aria-controls="nav-sanitation" aria-selected="false">
                             <img src={disinfectionSanitationIcon} width={"50px"} />
                             <div>
-                                Disinfection/Sanitation
+                                Sanitation
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-waxing-tab" data-bs-toggle="tab" data-bs-target="#nav-waxing" type="button" role="tab" aria-controls="nav-waxing" aria-selected="false">
+                        <button class="nav-link" style={{width: '160px'}} id="nav-waxing-tab" data-bs-toggle="tab" data-bs-target="#nav-waxing" type="button" role="tab" aria-controls="nav-waxing" aria-selected="false">
                             <img src={waxingIcon} width={"50px"} />
                             <div>
                                 Waxing
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-asphaltRemoval-tab" data-bs-toggle="tab" data-bs-target="#nav-asphaltRemoval" type="button" role="tab" aria-controls="nav-asphaltRemoval" aria-selected="false">
+                        <button class="nav-link" style={{width: '160px'}} id="nav-asphaltRemoval-tab" data-bs-toggle="tab" data-bs-target="#nav-asphaltRemoval" type="button" role="tab" aria-controls="nav-asphaltRemoval" aria-selected="false">
                             <img src={asphaltRemovalIcon} width={"50px"} />
                             <div>
                                 Asphalt Removal
@@ -185,15 +185,15 @@ export default function LandingServicesList() {
                             </Row>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-disinfectionSanitation" role="tabpanel" aria-labelledby="nav-disinfectionSanitation-tab">
+                    <div class="tab-pane fade" id="nav-sanitation" role="tabpanel" aria-labelledby="nav-sanitation-tab">
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={disinfectionSanitationService} alt="Disinfection Sanitation Service" className='w-100' />
+                                    <img src={disinfectionSanitationService} alt="Sanitation Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Disinfection/Sanitation</h2>
+                                        <h2>Sanitation</h2>
                                         <p>Description</p>
                                     </div>
                                 </Col>
