@@ -5,7 +5,7 @@ import LandingServicesList from '../components/LandingPageComponents/LandingServ
 
 export default function LandingPage() {
   return (
-    <div>
+    <div className='mb-5'>
       <div className='vh-100 w-100 flex-column justify-content-center bg-with-image'>
         <Header />
         <div className='d-flex flex-column justify-content-center '  style={{height: 'calc(100% - 75px)'}}>
