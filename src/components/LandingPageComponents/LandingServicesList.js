@@ -24,20 +24,32 @@ export default function LandingServicesList() {
                                 Car Wash
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-detailing-tab" data-bs-toggle="tab" data-bs-target="#nav-detailing" type="button" role="tab" aria-controls="nav-detailing" aria-selected="false">
+                        <button class="nav-link" id="nav-ceramicCoating-tab" data-bs-toggle="tab" data-bs-target="#nav-ceramicCoating" type="button" role="tab" aria-controls="nav-ceramicCoating" aria-selected="false">
                             <img src={detailingIcon} width={"50px"} />
                             <div>
-                                Detailing
+                                Ceramic Coating
                             </div>
                         </button>
-                        <button class="nav-link" id="nav-buffing-tab" data-bs-toggle="tab" data-bs-target="#nav-buffing" type="button" role="tab" aria-controls="nav-buffing" aria-selected="false">
-                            Buffing
+                        <button class="nav-link" id="nav-undercoating-tab" data-bs-toggle="tab" data-bs-target="#nav-undercoating" type="button" role="tab" aria-controls="nav-undercoating" aria-selected="false">
+                            Undercoating
+                        </button>
+                        <button class="nav-link" id="nav-interiorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-interiorDetailing" type="button" role="tab" aria-controls="nav-interiorDetailing" aria-selected="false">
+                            Interior Detailing
+                        </button>
+                        <button class="nav-link" id="nav-exteriorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-exteriorDetailing" type="button" role="tab" aria-controls="nav-exteriorDetailing" aria-selected="false">
+                            Exterior Detailing
+                        </button>
+                        <button class="nav-link" id="nav-engineWash-tab" data-bs-toggle="tab" data-bs-target="#nav-engineWash" type="button" role="tab" aria-controls="nav-engineWash" aria-selected="false">
+                            Engine Wash
+                        </button>
+                        <button class="nav-link" id="nav-disinfectionSanitation-tab" data-bs-toggle="tab" data-bs-target="#nav-disinfectionSanitation" type="button" role="tab" aria-controls="nav-disinfectionSanitation" aria-selected="false">
+                            Disinfection/Sanitation
                         </button>
                         <button class="nav-link" id="nav-waxing-tab" data-bs-toggle="tab" data-bs-target="#nav-waxing" type="button" role="tab" aria-controls="nav-waxing" aria-selected="false">
                             Waxing
                         </button>
-                        <button class="nav-link" id="nav-deepclean-tab" data-bs-toggle="tab" data-bs-target="#nav-deepclean" type="button" role="tab" aria-controls="nav-deepclean" aria-selected="false">
-                            Deep Clean
+                        <button class="nav-link" id="nav-asphaltRemoval-tab" data-bs-toggle="tab" data-bs-target="#nav-asphaltRemoval" type="button" role="tab" aria-controls="nav-asphaltRemoval" aria-selected="false">
+                            Asphalt Removal
                         </button>
                     </div>
                 </nav>
@@ -58,30 +70,90 @@ export default function LandingServicesList() {
                             </Row>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-detailing" role="tabpanel" aria-labelledby="nav-detailing-tab">
+                    <div class="tab-pane fade" id="nav-ceramicCoating" role="tabpanel" aria-labelledby="nav-ceramicCoating-tab">
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={detailingImage} alt="Detailing Service" className='w-100' />
+                                    <img src={detailingImage} alt="Ceramic Coating Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Detailing</h2>
+                                        <h2>Ceramic Coating</h2>
                                         <p>Description</p>
                                     </div>
                                 </Col>
                             </Row>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-buffing" role="tabpanel" aria-labelledby="nav-buffing-tab">
+                    <div class="tab-pane fade" id="nav-undercoating" role="tabpanel" aria-labelledby="nav-undercoating-tab">
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={buffingImage} alt="Buffing Service" className='w-100' />
+                                    <img src={buffingImage} alt="Undercoating Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Buffing</h2>
+                                        <h2>Undercoating</h2>
+                                        <p>Description</p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-interiorDetailing" role="tabpanel" aria-labelledby="nav-interiorDetailing-tab">
+                        <div className='container'>
+                            <Row>
+                                <Col md={6}>
+                                    <img src={waxingImage} alt="Interior Detailing Service" className='w-100' />
+                                </Col>
+                                <Col md={6}>
+                                    <div>
+                                        <h2>Interior Detailing</h2>
+                                        <p>Description</p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-exteriorDetailing" role="tabpanel" aria-labelledby="nav-exteriorDetailing-tab">
+                        <div className='container'>
+                            <Row>
+                                <Col md={6}>
+                                    <img src={deepCleanImage} alt="Exterior Detailing Service" className='w-100' />
+                                </Col>
+                                <Col md={6}>
+                                    <div>
+                                        <h2>Exterior Detailing</h2>
+                                        <p>Description</p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-engineWash" role="tabpanel" aria-labelledby="nav-engineWash-tab">
+                        <div className='container'>
+                            <Row>
+                                <Col md={6}>
+                                    <img src={deepCleanImage} alt="Engine Wash Service" className='w-100' />
+                                </Col>
+                                <Col md={6}>
+                                    <div>
+                                        <h2>Engine Wash</h2>
+                                        <p>Description</p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-disinfectionSanitation" role="tabpanel" aria-labelledby="nav-disinfectionSanitation-tab">
+                        <div className='container'>
+                            <Row>
+                                <Col md={6}>
+                                    <img src={deepCleanImage} alt="Disinfection Sanitation Service" className='w-100' />
+                                </Col>
+                                <Col md={6}>
+                                    <div>
+                                        <h2>Disinfection/Sanitation</h2>
                                         <p>Description</p>
                                     </div>
                                 </Col>
@@ -92,7 +164,7 @@ export default function LandingServicesList() {
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={waxingImage} alt="Waxing Service" className='w-100' />
+                                    <img src={deepCleanImage} alt="Waxing Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
@@ -103,15 +175,15 @@ export default function LandingServicesList() {
                             </Row>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-deepclean" role="tabpanel" aria-labelledby="nav-deepclean-tab">
+                    <div class="tab-pane fade" id="nav-asphaltRemoval" role="tabpanel" aria-labelledby="nav-asphaltRemoval-tab">
                         <div className='container'>
                             <Row>
                                 <Col md={6}>
-                                    <img src={deepCleanImage} alt="Deep Clean Service" className='w-100' />
+                                    <img src={deepCleanImage} alt="Asphalt Removal Service" className='w-100' />
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Deep Clean</h2>
+                                        <h2>Asphalt Removal</h2>
                                         <p>Description</p>
                                     </div>
                                 </Col>
