@@ -33,61 +33,61 @@ export default function LandingServicesList() {
             <div className='text-center fs-2 fw-light my-5 '>
                 WASHING SERVICES
             </div>
-            <div className='mx-5'>
+            <div className='mx-1'>
 
                 <nav>
                     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
                         <button class="nav-link active" style={{width: '160px'}} id="nav-carwash-tab" data-bs-toggle="tab" data-bs-target="#nav-carwash" type="button" role="tab" aria-controls="nav-carwash" aria-selected="true">
                             <img src={carwashIcon} width={"50px"} />
-                            <div>
+                            <div className='mt-1'>
                                 Car Wash
                             </div>
                         </button>
                         <button class="nav-link" style={{width: '160px'}} id="nav-ceramicCoating-tab" data-bs-toggle="tab" data-bs-target="#nav-ceramicCoating" type="button" role="tab" aria-controls="nav-ceramicCoating" aria-selected="false">
                             <img src={ceramicCoatingIcon} width={"50px"} />
-                            <div>
+                            <div className='mt-1'>
                                 Ceramic Coating
                             </div>
                         </button>
                         <button class="nav-link" style={{width: '160px'}} id="nav-undercoating-tab" data-bs-toggle="tab" data-bs-target="#nav-undercoating" type="button" role="tab" aria-controls="nav-undercoating" aria-selected="false">
                             <img src={undercoatingIcon} width={"50px"} />
-                            <div>
+                            <div className='mt-1'>
                                 Undercoating
                             </div>
                         </button>
                         <button class="nav-link" style={{width: '160px'}} id="nav-interiorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-interiorDetailing" type="button" role="tab" aria-controls="nav-interiorDetailing" aria-selected="false">
                             <img src={interiorDetailingIcon} width={"50px"} />
-                            <div>
+                            <div className='mt-1'>
                                 Interior Detailing
                             </div>
                         </button>
                         <button class="nav-link" style={{width: '160px'}} id="nav-exteriorDetailing-tab" data-bs-toggle="tab" data-bs-target="#nav-exteriorDetailing" type="button" role="tab" aria-controls="nav-exteriorDetailing" aria-selected="false">
                             <img src={exteriorDetailingIcon} width={"50px"} />
-                            <div>
+                            <div className='mt-1'>
                                 Exterior Detailing
                             </div>
                         </button>
                         <button class="nav-link" style={{width: '160px'}} id="nav-engineWash-tab" data-bs-toggle="tab" data-bs-target="#nav-engineWash" type="button" role="tab" aria-controls="nav-engineWash" aria-selected="false">
                             <img src={engineWashIcon} width={"50px"} />
-                            <div>
+                            <div className='mt-1'>
                                 Engine Wash
                             </div>
                         </button>
                         <button class="nav-link" style={{width: '160px'}} id="nav-sanitation-tab" data-bs-toggle="tab" data-bs-target="#nav-sanitation" type="button" role="tab" aria-controls="nav-sanitation" aria-selected="false">
                             <img src={disinfectionSanitationIcon} width={"50px"} />
-                            <div>
+                            <div className='mt-1'>
                                 Sanitation
                             </div>
                         </button>
                         <button class="nav-link" style={{width: '160px'}} id="nav-waxing-tab" data-bs-toggle="tab" data-bs-target="#nav-waxing" type="button" role="tab" aria-controls="nav-waxing" aria-selected="false">
                             <img src={waxingIcon} width={"50px"} />
-                            <div>
+                            <div className='mt-1'>
                                 Waxing
                             </div>
                         </button>
                         <button class="nav-link" style={{width: '160px'}} id="nav-asphaltRemoval-tab" data-bs-toggle="tab" data-bs-target="#nav-asphaltRemoval" type="button" role="tab" aria-controls="nav-asphaltRemoval" aria-selected="false">
                             <img src={asphaltRemovalIcon} width={"50px"} />
-                            <div>
+                            <div className='mt-1'>
                                 Asphalt Removal
                             </div>
                         </button>

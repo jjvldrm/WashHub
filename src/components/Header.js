@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ isLoggedIn }) {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light px-5">
@@ -21,16 +21,15 @@ export default function Header() {
                             <li className="nav-item">
                                 <Link to="/about" className="nav-link text-white fs-5">About</Link>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    [Name]
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><Link to="/profile" className="dropdown-item">Profile</Link></li>
-                                    <li><Link to="/booking" className="dropdown-item">Booking</Link></li>
-                                    <li><Link to="/logout" className="dropdown-item">Logout</Link></li>
-                                </ul>
-                            </li>
+                            {isLoggedIn ? (
+                                <li className="nav-item">
+                                    <Link to="/profile" className="nav-link text-white fs-5">[Name]</Link>
+                                </li>
+                            ) : (
+                                <li className="nav-item">
+                                    <Link to="/login" className="nav-link text-white fs-5">Login</Link>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>

@@ -8,14 +8,16 @@ export default function ServicePage() {
   const [selectedService, setSelectedService] = useState(null);
 
   const serviceList = [
-    { name: "Company A", price: "Php 100", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Exterior Detailing"] },
-    { name: "Company B", price: "Php 500", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Exterior Detailing"] },
-    { name: "Company C", price: "Php 500", address: "Malolos, Bulacan", service: 2, tags: ["Interior Detailing", "Exterior Detailing"] },
-    { name: "Company D", price: "Php 200", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Waxing"] },
-    { name: "Company E", price: "Php 300", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Exterior Detailing"] },
-    { name: "Company F", price: "Php 700", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Exterior Detailing"] },
-    { name: "Company G", price: "Php 100", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Exterior Detailing"] },
-    { name: "Company H", price: "Php 200", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Exterior Detailing"] },
+    { name: "Professional Carwash and Auto Detailing", price: "Php 100", address: "Malolos, Bulacan", service: 2, tags: ["Underwash", "Carwash",  "Ceramic Coating", "Undercoating", "Interior Detailing", "Exterior Detailing", "Engine Wash", "Waxing"] },
+    { name: "DOLFZ Carwash", price: "Php 500", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Interior Detailing", "Exterior Detailing", "Waxing"] },
+    { name: "Platinum Carwash", price: "Php 500", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Interior Detailing", "Exterior Detailing"] },
+    { name: "Pitwork Carwash & Auto Detailing", price: "Php 200", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Interior Detailing", "Exterior Detailing", "Engine Wash", "Waxing"] },
+    { name: "KM3 Carwash & Auto Detailing", price: "Php 300", address: "Malolos, Bulacan", service: 2, tags: ["Underwash", "Carwash", "Interior Detailing", "Exterior Detailing", "Engine Wash", "Waxing", "Asphalt Removal"] },
+    { name: "G-Shine Carwash & Auto Detailing", price: "Php 700", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Interior Detailing", "Ceramic Coating", "Exterior Detailing", "Engine Wash", "Waxing", "Asphalt Removal"] },
+    { name: "Royal Wash Carwash & Auto Detailing", price: "Php 100", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Interior Detailing", "Exterior Detailing", "Engine Wash", "Waxing"] },
+    { name: "Buzzworks Carwash & Auto Detailing", price: "Php 200", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Interior Detailing", "Exterior Detailing", "Engine Wash", "Sanitation", "Waxing"] },
+    { name: "SFREN Carwash", price: "Php 200", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Interior Detailing", "Exterior Detailing", "Engine Wash", "Waxing"] },
+    { name: "Guinhawa Carwash", price: "Php 200", address: "Malolos, Bulacan", service: 2, tags: ["Carwash", "Exterior Detailing", "Engine Wash", "Waxing", "Asphalt Removal"] },
   ];
 
   const filteredServiceList = selectedService ? serviceList.filter(service => service.tags.includes(selectedService)) : serviceList;

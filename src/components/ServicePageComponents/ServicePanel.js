@@ -7,8 +7,8 @@ export default function ServicePanel({ name, price, address, service, tags }) {
         <div className='bg-secondary bg-opacity-10 rounded-3 p-4' style={{ width: '400px' }}>
             <img src={image} className='w-100 rounded-3 mb-3 text-center' alt="Service" />
             <Row>
-                <Col className='d-flex justify-content-between'>
-                    <div className='fw-semibold px-4 py-1 d-inline-block bg-opacity-50 bg-primary rounded-3'>
+                <Col className='d-flex justify-content-between' md={8}>
+                    <div className='fw-semibold px-3 py-1 d-inline-block bg-opacity-50 bg-primary rounded-3'>
                         {name}
                     </div>
                 </Col>
@@ -33,7 +33,7 @@ export default function ServicePanel({ name, price, address, service, tags }) {
             <Row>
                 <div className='m-2'>
                     {tags.map((tag, index) => (
-                        <span key={index} className='badge bg-primary-subtle me-2 text-black fw-normal py-2 px-3'>{tag}</span>
+                        <span key={index} className='badge bg-primary-subtle me-2 mb-2 text-black fw-normal py-2 px-3'>{tag}</span>
                     ))}
                 </div>
             </Row>

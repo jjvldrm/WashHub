@@ -53,3 +53,14 @@ html {
 .line-before-after::after {
   bottom: -5px;
 }
+
+.service-panel {
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.service-panel.fade-out {
+  opacity: 0;
+  height: 0;
+}
