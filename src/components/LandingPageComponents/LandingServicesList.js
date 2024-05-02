@@ -24,10 +24,17 @@ export default function LandingServicesList() {
 
     const handleTabClick = (tabId) => {
         setActiveTab(tabId);
+        const element = document.getElementById('nav-tab');
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     };
     return (
         <div>
-            <div className='text-center fs-2 fw-light my-5 '>
+            <div className='text-center fs-2 fw-light my-5' id='above-nav-tab'>
                 WASHING SERVICES
             </div>
             <div className='mx-1'>

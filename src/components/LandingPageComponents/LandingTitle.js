@@ -4,11 +4,14 @@ import { Button } from 'react-bootstrap';
 export default function LandingTitle() {
     const [isHovered, setIsHovered] = useState(false);
     const handleScroll = () => {
-        window.scrollBy({
-            top: window.innerHeight,
-            behavior: 'smooth'
-        });
-    };
+        const element = document.getElementById('above-nav-tab');
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      };
     return (
         <div className='LandingPage'>
             <div className='container text-white text-center fs-2 fw-normal'>

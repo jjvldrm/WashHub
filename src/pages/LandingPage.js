@@ -5,7 +5,7 @@ import LandingServicesList from '../components/LandingPageComponents/LandingServ
 
 export default function LandingPage() {
   return (
-    <div className='mb-5'>
+    <div>
       <div className='vh-100 w-100 flex-column justify-content-center landingPage-bg-with-image'>
         <div className='bg-black bg-opacity-10'>
         <Header />
@@ -16,6 +16,9 @@ export default function LandingPage() {
         </div>
       </div>
       <LandingServicesList />
+      <footer className='bg-black bg-opacity-10 h-100 py-5 mt-5'>
+        &nbsp; 
+      </footer>
     </div>
   );
 }
