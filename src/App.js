@@ -20,7 +20,7 @@ export default function App() {
             <Route path="/services" element={<ServicePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/booking" element={<BookingPage />} />
-            <Route path="/schedule" component={SchedulePage} />
+            <Route path="/schedule" element={<SchedulePage />} />
           </Routes>
         </div>
       </AuthProvider>
