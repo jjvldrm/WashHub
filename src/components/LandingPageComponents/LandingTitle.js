@@ -11,7 +11,7 @@ export default function LandingTitle() {
     };
     return (
         <div className='LandingPage'>
-            <div className='container text-white text-center fs-4 fw-normal'>
+            <div className='container text-white text-center fs-2 fw-normal'>
                 <span class="line-before-after" style={{ letterSpacing: '8px' }}>
                     WASH HUB
                 </span>

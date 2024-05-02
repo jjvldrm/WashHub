@@ -6,13 +6,10 @@ export default function LoginPage() {
     const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
 
-    const handleLogin = () => {
-        // Here you can perform the login logic, such as sending a request to your server
-        // For demonstration, we'll just log the username and password to the console
+    const handleLogin = () => { 
         console.log('Username:', username);
         console.log('Password:', password);
 
-        // Assuming login is successful, set loggedIn to true
         setLoggedIn(true);
     };
 
