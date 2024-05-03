@@ -28,6 +28,13 @@ html {
   background-repeat: no-repeat;
 }
 
+.loginPage-bg-with-image{
+  position: relative;
+  background-image: url("./assets/loginBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .LandingPage{
     z-index: 2;
 }

@@ -53,7 +53,7 @@ export default function ServicePage() {
               key={index}
               id={index}
               name={service.name}
-              price={service.price}
+              location={service.location}
               address={service.address}
               service={service.service}
               tags={service.tags}

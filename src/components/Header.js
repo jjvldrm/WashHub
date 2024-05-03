@@ -10,13 +10,13 @@ const SignOutConfirmationModal = ({ show, onHide, onConfirm }) => {
             <Modal.Header closeButton>
                 <Modal.Title>Confirmation</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Are you sure you want to sign out?</Modal.Body>
+            <Modal.Body>Are you sure you want to logout?</Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={onHide}>
                     Cancel
                 </Button>
                 <Button variant="primary" onClick={onConfirm}>
-                    Sign Out
+                    Logout
                 </Button>
             </Modal.Footer>
         </Modal>

@@ -28,10 +28,10 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="bg-black vh-100 d-flex align-items-center justify-content-center">
-      <div className="container rounded-4 bg-white d-flex flex-column p-4" style={{ width: '40%' }}>
+    <div className="loginPage-bg-with-image vh-100 d-flex align-items-center justify-content-center">
+      <div className="container rounded-4 bg-black bg-opacity-75 text-white d-flex flex-column p-4" style={{ width: '40%' }}>
         <div>
-          <Link to={{pathname: '/'}} style={{textDecoration: 'none', color: 'black', fontWeight: '600'}}>
+          <Link to={{pathname: '/'}} style={{textDecoration: 'none', color: 'white', fontWeight: '600'}}>
             <BiChevronLeft />Back
           </Link>
 
@@ -63,7 +63,7 @@ const LoginPage = () => {
             <Button
               type="submit"
               className="my-3"
-              style={{ width: '100%', padding: '5px' }}
+              style={{ width: '70%', padding: '5px' }}
             >
               Login
             </Button>
