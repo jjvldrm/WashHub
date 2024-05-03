@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import { Button, Col, Row } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom'; // Import navigate function from React Router
-import { auth } from '../backend/firebase'; // Import Firebase auth instance
+import { Button, Col, Modal, Row } from 'react-bootstrap'; // Import Modal from react-bootstrap
+import { useNavigate } from 'react-router-dom';
+import { auth } from '../backend/firebase';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -12,6 +12,7 @@ function SchedulePage() {
     const [selectedTags, setSelectedTags] = useState([]);
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedTime, setSelectedTime] = useState('');
+    const [showModal, setShowModal] = useState(false); // State to control modal visibility
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -48,12 +49,18 @@ function SchedulePage() {
         if (!user) {
             navigate('/login');
         } else {
-            console.log('Booking appointment...');
+            setShowModal(true); // Show modal if user is logged in
         }
     };
 
     const goBack = () => {
         window.history.back();
+    };
+
+    const confirmBooking = () => {
+        // Handle booking logic here
+        console.log('Booking appointment...');
+        setShowModal(false); // Close modal after booking
     };
 
     return (
@@ -64,7 +71,7 @@ function SchedulePage() {
                 </div>
             </div>
             <div className='container mt-5'>
-                <div className='text-primary fw-semibold d-flex flex-row'>
+                <div className='text-primary fw-semibold d-flex flex-row mb-3'>
                     <i className='bi bi-chevron-left pointer' onClick={goBack}></i>
                     <div className='ms-1 pointer' onClick={goBack}>
                         Back
@@ -144,6 +151,27 @@ function SchedulePage() {
                     </Col>
                 </Row>
             </div>
+
+            {/* Modal for confirming booking */}
+            <Modal show={showModal} onHide={() => setShowModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Confirm Booking</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>Are you sure you want to book this appointment?</p>
+                    <p>Selected Services: {selectedTags.join(', ')}</p>
+                    <p>Date: {selectedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                    <p>Time: {selectedTime}</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowModal(false)}>
+                        Cancel
+                    </Button>
+                    <Button variant="primary" onClick={confirmBooking}>
+                        Confirm
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 }
