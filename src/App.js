@@ -3,7 +3,7 @@ import LandingPage from './pages/LandingPage.js';
 import ServicePage from './pages/ServicePage.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
-import './App.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './backend/AuthProvider.js';
 import SchedulePage from './pages/SchedulePage.js';
@@ -11,6 +11,7 @@ import BookingPage from './pages/BookingPage.js';
 import LoginPage from './pages/LoginPage.js';
 import RegistrationPage from './pages/RegistrationPage.js';
 import AuthDetails from './pages/AuthDetails.js';
+import './App.css';
 
 export default function App() {
   return (

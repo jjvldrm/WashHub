@@ -1,16 +1,7 @@
-:root{
-  --primary-color: #198754;
-  --primary: #198754;
-}
-
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-.pointer{
-  cursor: "pointer";
 }
 
 .landingPage-bg-with-image {
@@ -75,4 +66,8 @@ html {
 .service-panel.fade-out {
   opacity: 0;
   height: 0;
+}
+
+.pointer{
+  cursor: "pointer";
 }

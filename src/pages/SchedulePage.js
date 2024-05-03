@@ -48,9 +48,12 @@ function SchedulePage() {
         if (!user) {
             navigate('/login');
         } else {
-            // Logic for booking the appointment
             console.log('Booking appointment...');
         }
+    };
+
+    const goBack = () => {
+        window.history.back();
     };
 
     return (
@@ -61,6 +64,12 @@ function SchedulePage() {
                 </div>
             </div>
             <div className='container mt-5'>
+                <div className='text-primary fw-semibold d-flex flex-row'>
+                    <i className='bi bi-chevron-left pointer' onClick={goBack}></i>
+                    <div className='ms-1 pointer' onClick={goBack}>
+                        Back
+                    </div>
+                </div>
                 <Row>
                     <Col md={5}>
                         <iframe
