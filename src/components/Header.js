@@ -2,9 +2,30 @@ import React, { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { Link } from 'react-router-dom';
 import { auth } from "../backend/firebase";
+import { Modal, Button } from "react-bootstrap";
+
+const SignOutConfirmationModal = ({ show, onHide, onConfirm }) => {
+    return (
+        <Modal show={show} onHide={onHide}>
+            <Modal.Header closeButton>
+                <Modal.Title>Confirmation</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Are you sure you want to sign out?</Modal.Body>
+            <Modal.Footer>
+                <Button variant="secondary" onClick={onHide}>
+                    Cancel
+                </Button>
+                <Button variant="primary" onClick={onConfirm}>
+                    Sign Out
+                </Button>
+            </Modal.Footer>
+        </Modal>
+    );
+};
 
 export default function Header() {
     const [authUser, setAuthUser] = useState(null);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         const listen = onAuthStateChanged(auth, (user) => {
@@ -20,13 +41,20 @@ export default function Header() {
         };
     }, []);
 
-    const userSignOut = () => {
+    const handleSignOut = () => {
         signOut(auth)
             .then(() => {
-                console.log("sign out successful");
+                handleHideModal()
+                console.log("Sign out successful");
             })
-            .catch((error) => console.log(error));
+            .catch((error) => {
+                console.log(error);
+            });
     };
+
+    const handleShowModal = () => setShowModal(true);
+    const handleHideModal = () => setShowModal(false);
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light px-5">
@@ -48,7 +76,16 @@ export default function Header() {
                             </li>
                             {authUser ? (
                                 <li className="nav-item">
-                                    <Link to="/profile" className="nav-link text-white fs-5">{authUser.email}</Link>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle text-white fs-5 fw-normal" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            {authUser.email}
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <Link to="/profile" className="nav-link text-white fs-6"><li><a class="dropdown-item">Profile</a></li></Link>
+                                            <Link to="/booking" className="nav-link text-white fs-6"><li><a class="dropdown-item">Booking</a></li></Link>
+                                            <Link onClick={handleShowModal} className="nav-link text-white fs-6"><li><a class="dropdown-item">Logout</a></li></Link>
+                                        </ul>
+                                    </li>
                                 </li>
                             ) : (
                                 <li className="nav-item">
@@ -59,6 +96,11 @@ export default function Header() {
                     </div>
                 </div>
             </nav>
+            <SignOutConfirmationModal
+                show={showModal}
+                onHide={handleHideModal}
+                onConfirm={handleSignOut}
+            />
         </div>
     )
 }

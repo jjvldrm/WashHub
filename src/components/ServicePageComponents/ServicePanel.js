@@ -49,7 +49,7 @@ export default function ServicePanel({ name, price, address, service, tags }) {
             <hr />
             <div className='text-center'>
                 <Link to={{ pathname: `/schedule` }}>
-                    <Button className='rounded-5 px-4' onClick={handleScheduleVisit}>Book</Button>
+                    <Button className='rounded-5 px-4' onClick={handleScheduleVisit}>Book an Appointment</Button>
                 </Link>
             </div>
         </div>

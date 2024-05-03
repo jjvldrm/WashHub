@@ -54,6 +54,11 @@ html {
   bottom: -5px;
 }
 
+.nav-link:hover {
+  color: #0d6efd !important; /* Change to your primary color */
+  text-decoration: none !important; /* Remove underline */
+}
+
 .service-panel {
   opacity: 1;
   height: auto;
