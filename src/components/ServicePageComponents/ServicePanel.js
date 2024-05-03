@@ -3,7 +3,13 @@ import { Row, Col, Button } from 'react-bootstrap';
 import image from '../../assets/deal-03.jpg';
 import { Link } from 'react-router-dom';
 
-export default function ServicePanel({ id, name, price, address, service, tags, onClick }) {
+export default function ServicePanel({ name, price, address, service, tags }) {
+
+    const handleScheduleVisit = () => {
+        // Save parameters to local storage
+        localStorage.setItem('serviceDetails', JSON.stringify({ name, price, address, service, tags }));
+    };
+
     return (
         <div className='bg-secondary bg-opacity-10 rounded-3 p-4' style={{ width: '400px' }}>
             <img src={image} className='w-100 rounded-3 mb-3 text-center' alt="Service" />
@@ -42,8 +48,8 @@ export default function ServicePanel({ id, name, price, address, service, tags, 
             </div>
             <hr />
             <div className='text-center'>
-                <Link to={{ pathname: `/schedule/${id}`, state: { name, price, address, service, tags } }}>
-                    <Button className='rounded-5 px-4'>Schedule a Visit</Button>
+                <Link to={{ pathname: `/schedule` }}>
+                    <Button className='rounded-5 px-4' onClick={handleScheduleVisit}>Book</Button>
                 </Link>
             </div>
         </div>

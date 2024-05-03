@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { auth } from "../backend/firebase.js";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
-const LoginPage = () => {
+const RegistrationPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const login = (e) => {
+  const register = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
       })
@@ -20,8 +19,8 @@ const LoginPage = () => {
 
   return (
     <div className="login-container">
-      <form onSubmit={login}>
-        <h1>Login</h1>
+      <form onSubmit={register}>
+        <h1>Create an Account</h1>
         <input
           type="email"
           placeholder="Enter your email"
@@ -34,10 +33,16 @@ const LoginPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-          <button type="submit">Login</button>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        ></input>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
 };
 
-export default LoginPage;
+export default RegistrationPage;
