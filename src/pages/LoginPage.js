@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import { auth } from "../backend/firebase.js";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Initialize navigate hook
 
   const login = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
+        // Redirect to '/' route after successful login
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
@@ -34,7 +37,7 @@ const LoginPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-          <button type="submit">Login</button>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
