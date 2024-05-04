@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { auth } from "../backend/firebase.js";
+import { auth, firestore } from "../backend/firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Button, Modal } from "react-bootstrap";
-import { Link, useNavigate  } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { doc, setDoc } from "firebase/firestore";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
 const RegistrationPage = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -13,7 +17,12 @@ const RegistrationPage = () => {
   const [passwordMismatch, setPasswordMismatch] = useState(false);
   const navigate = useNavigate();
 
-  const register = (e) => {
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setModalMessage("");
+  };
+
+  const register = async (e) => {
     e.preventDefault();
     if (!email || !username || !password || !confirmPassword) {
       setShowEmptyFieldModal(true);
@@ -23,14 +32,32 @@ const RegistrationPage = () => {
       setPasswordMismatch(true);
       return;
     }
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
-        navigate("/login");
-      })
-      .catch((error) => {
-        console.log(error);
+
+    // Check if user already exists with the same email
+    const userQuery = query(collection(firestore, "users"), where("email", "==", email));
+    const querySnapshot = await getDocs(userQuery);
+    if (!querySnapshot.empty) {
+      // User already exists
+      setShowModal(true);
+      setModalMessage("User with this email already exists.");
+      return;
+    }
+
+    // If user doesn't exist, proceed with user creation
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userId = userCredential.user.uid;
+      const userDocRef = doc(firestore, "users", userId);
+      await setDoc(userDocRef, {
+        name: username,
+        email: email,
+        // Add any other user data fields here
       });
+      console.log("User registered successfully");
+      navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -95,6 +122,19 @@ const RegistrationPage = () => {
           Already have an account? <Link to={{ pathname: `/login` }}>Log into an Account.</Link>
         </div>
       </div>
+
+      {/* Information Modal */}
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Information</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{modalMessage}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleCloseModal}>
+            OK
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
       {/* Modal for Empty Field */}
       <Modal show={showEmptyFieldModal} onHide={() => setShowEmptyFieldModal(false)}>

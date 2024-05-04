@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { Link } from 'react-router-dom';
-import { auth } from "../backend/firebase";
+import { auth, firestore } from "../backend/firebase";
 import { Modal, Button } from "react-bootstrap";
+import { doc, getDoc } from "firebase/firestore";
 
 const SignOutConfirmationModal = ({ show, onHide, onConfirm }) => {
     return (
@@ -28,23 +29,36 @@ export default function Header() {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        const listen = onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user) {
                 setAuthUser(user);
+
+                try {
+                    const userDocRef = doc(firestore, "users", user.uid);
+                    console.log(userDocRef);
+                    const docSnapshot = await getDoc(userDocRef);
+                    console.log("Document Snapshot:", docSnapshot.data()); // Log the document snapshot
+                    if (docSnapshot.exists()) {
+                        const userData = docSnapshot.data();
+                        setAuthUser(prevState => ({ ...prevState, name: userData.name }));
+                    } else {
+                        console.log("No such document!");
+                    }
+                } catch (error) {
+                    console.log("Error getting document:", error);
+                }
             } else {
                 setAuthUser(null);
             }
         });
 
-        return () => {
-            listen();
-        };
+        return unsubscribe;
     }, []);
 
     const handleSignOut = () => {
         signOut(auth)
             .then(() => {
-                handleHideModal()
+                handleHideModal();
                 console.log("Sign out successful");
             })
             .catch((error) => {
@@ -76,14 +90,14 @@ export default function Header() {
                             </li>
                             {authUser ? (
                                 <li className="nav-item">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle text-white fs-5 fw-normal" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {authUser.email}
+                                    <li className="nav-item dropdown">
+                                        <a className="nav-link dropdown-toggle text-white fs-5 fw-normal" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            {authUser.name}
                                         </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <Link to="/profile" className="nav-link text-white fs-6"><li><a class="dropdown-item">Profile</a></li></Link>
-                                            <Link to="/booking" className="nav-link text-white fs-6"><li><a class="dropdown-item">Booking</a></li></Link>
-                                            <Link onClick={handleShowModal} className="nav-link text-white fs-6"><li><a class="dropdown-item">Logout</a></li></Link>
+                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <Link to="/profile" className="nav-link text-white fs-6"><li><a className="dropdown-item">Profile</a></li></Link>
+                                            <Link to="/booking" className="nav-link text-white fs-6"><li><a className="dropdown-item">Booking</a></li></Link>
+                                            <Link onClick={handleShowModal} className="nav-link text-white fs-6"><li><a className="dropdown-item">Logout</a></li></Link>
                                         </ul>
                                     </li>
                                 </li>
