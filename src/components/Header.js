@@ -94,7 +94,7 @@ export default function Header() {
                                         <a className="nav-link dropdown-toggle text-white fs-5 fw-normal" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {authUser.name}
                                         </a>
-                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                                             <Link to="/profile" className="nav-link text-white fs-6"><li><a className="dropdown-item">Profile</a></li></Link>
                                             <Link to="/booking" className="nav-link text-white fs-6"><li><a className="dropdown-item">Booking</a></li></Link>
                                             <Link onClick={handleShowModal} className="nav-link text-white fs-6"><li><a className="dropdown-item">Logout</a></li></Link>

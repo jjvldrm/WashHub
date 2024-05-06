@@ -19,6 +19,14 @@ html {
   background-repeat: no-repeat;
 }
 
+.bookPage-bg-with-image {
+  height: 100%;
+  position: relative;
+  background-image: url("./assets/bookPageBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .loginPage-bg-with-image{
   position: relative;
   background-image: url("./assets/loginBg.jpg");

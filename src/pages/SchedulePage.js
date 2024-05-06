@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import { Button, Col, Modal, Row } from 'react-bootstrap'; // Import Modal from react-bootstrap
+import { Button, Col, Modal, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../backend/firebase';
 import DatePicker from 'react-datepicker';
+import { toast } from 'react-toastify';
 import 'react-datepicker/dist/react-datepicker.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { firestore } from '../backend/firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 function SchedulePage() {
     const [user, setUser] = useState(null);
@@ -12,7 +16,7 @@ function SchedulePage() {
     const [selectedTags, setSelectedTags] = useState([]);
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedTime, setSelectedTime] = useState('');
-    const [showModal, setShowModal] = useState(false); // State to control modal visibility
+    const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -49,7 +53,9 @@ function SchedulePage() {
         if (!user) {
             navigate('/login');
         } else {
-            setShowModal(true); // Show modal if user is logged in
+            const currentTime = generateTimeOptions()[0].value;
+            setSelectedTime(currentTime);
+            setShowModal(true);
         }
     };
 
@@ -58,10 +64,39 @@ function SchedulePage() {
     };
 
     const confirmBooking = () => {
-        // Handle booking logic here
-        console.log('Booking appointment...');
-        setShowModal(false); // Close modal after booking
+        saveBookingToFirebase().then(() => {
+            toast.success('Booking confirmed and saved successfully!');
+            setShowModal(false);
+        }).catch(error => {
+            console.error('Error saving booking:', error);
+            toast.error('Failed to save booking. Please try again later.');
+        });
     };
+
+    const saveBookingToFirebase = async () => {
+        const bookingData = {
+            name: name,
+            location: location,
+            address: address,
+            selectedTags: selectedTags,
+            date: selectedDate,
+            time: selectedTime,
+            userEmail: user ? user.email : null
+        };
+    
+        try {
+            await addDoc(collection(firestore, 'bookings'), bookingData);
+            console.log("Booking data saved successfully");
+            // Show toast notification upon successful saving
+            toast.success('Booking confirmed and saved successfully!');
+            setShowModal(false); // Close the modal after saving
+        } catch (error) {
+            console.error("Error saving booking:", error);
+            // Show error toast notification if saving fails
+            toast.error('Failed to save booking. Please try again later.');
+        }
+    };
+    
 
     return (
         <div>
@@ -72,8 +107,8 @@ function SchedulePage() {
             </div>
             <div className='container mt-5'>
                 <div className='text-primary fw-semibold d-flex flex-row mb-3'>
-                    <i className='bi bi-chevron-left pointer' onClick={goBack}></i>
-                    <div className='ms-1 pointer' onClick={goBack}>
+                    <i className='bi bi-chevron-left' onClick={goBack} style={{ cursor: 'pointer' }}></i>
+                    <div className='ms-1' onClick={goBack} style={{ cursor: 'pointer' }}>
                         Back
                     </div>
                 </div>
