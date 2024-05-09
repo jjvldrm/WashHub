@@ -52,6 +52,7 @@ export default function ServicePage() {
             <ServicePanel
               key={index}
               id={index}
+              image={service.image}
               name={service.name}
               location={service.location}
               address={service.address}
