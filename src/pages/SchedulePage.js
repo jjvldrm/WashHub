@@ -76,10 +76,9 @@ function SchedulePage() {
     const saveBookingToFirebase = async () => {
         const bookingData = {
             name: name,
-            location: location,
             address: address,
             selectedTags: selectedTags,
-            date: selectedDate,
+            date: selectedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
             time: selectedTime,
             userEmail: user ? user.email : null
         };

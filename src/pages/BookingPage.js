@@ -3,27 +3,20 @@ import Header from '../components/Header';
 import BookingTitle from '../components/BookingPageComponents/BookingTitle';
 import { Col, Row } from 'react-bootstrap';
 import { auth, firestore } from '../backend/firebase';
-import { query, where, getDocs } from 'firebase/firestore';
-import { onAuthStateChanged } from "firebase/auth";
+import { doc, where, getDocs } from 'firebase/firestore';
 
 export default function BookingPage() {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    // Function to fetch bookings for the current user
     const fetchBookings = async () => {
       try {
-        // Get the current user's email
         const userEmail = auth.currentUser.email;
 
-        // Create a query to filter bookings by user email
-        const q = query(
-          firestore.collection('bookings'),
-          where('userEmail', '==', userEmail)
-        );
+        const q = doc(firestore, "users", userEmail.userEmail);
 
-        // Fetch filtered bookings
         const querySnapshot = await getDocs(q);
+        console.log("Document Snapshot:", querySnapshot.data());
 
         // Map the documents to booking objects
         const userBookings = querySnapshot.docs.map((doc) => ({
@@ -59,13 +52,13 @@ export default function BookingPage() {
           <Col>Appointment Time</Col>
           <Col>Services</Col>
         </Row>
-        
+
         {bookings.map((booking) => (
           <Row key={booking.id} className='text-center p-2'>
-            <Col>{booking.carwashName}</Col>
-            <Col>{booking.location}</Col>
-            <Col>{booking.appointmentDate}</Col>
-            <Col>{booking.appointmentTime}</Col>
+            <Col>{booking.name}</Col>
+            <Col>{booking.address}</Col>
+            <Col>{booking.date}</Col>
+            <Col>{booking.time}</Col>
             <Col>{booking.services}</Col>
           </Row>
         ))}

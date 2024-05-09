@@ -35,7 +35,7 @@ export default function Header() {
 
                 try {
                     const userDocRef = doc(firestore, "users", user.uid);
-                    console.log(userDocRef);
+                    
                     const docSnapshot = await getDoc(userDocRef);
                     console.log("Document Snapshot:", docSnapshot.data()); // Log the document snapshot
                     if (docSnapshot.exists()) {
