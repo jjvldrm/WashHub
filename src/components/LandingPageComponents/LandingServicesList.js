@@ -108,8 +108,8 @@ export default function LandingServicesList() {
                                 <Col md={6}>
                                     <div>
                                         <h2>Carwash</h2>
-                                        <p className='fs-4'>&emsp;&emsp;A car wash service provides comprehensive cleaning and maintenance solutions for vehicles, catering to both exterior and interior needs. Utilizing specialized equipment like high-pressure hoses and cleaning agents, the service efficiently removes dirt, grime, and debris from the vehicle's surface, ensuring a pristine exterior appearance while also safeguarding the paint and finish from potential damage.</p>
-                                        <p className='fs-4'>&emsp;&emsp;Internally, the service offers thorough vacuuming to eliminate dirt and debris from carpets and upholstery, complemented by meticulous surface wiping to eradicate dust and spills. For more extensive interior care, options such as carpet and upholstery shampooing or protective treatments are also available.</p>
+                                        <p className='fs-4'>&emsp;&emsp;A car wash service provides comprehensive cleaning and maintenance for vehicles, addressing exterior and interior needs. Using specialized equipment and cleaning agents, it removes dirt and grime while protecting the paint. Internally, vacuuming and surface wiping ensure cleanliness, with additional options like shampooing and protective treatments available for thorough interior care.</p>
+                                       
                                     </div>
                                 </Col>
                             </Row>
@@ -124,7 +124,7 @@ export default function LandingServicesList() {
                                 <Col md={6}>
                                     <div>
                                         <h2>Ceramic Coating</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our ceramic coating service provides a premium protective layer for your vehicle's exterior surfaces. Applied as a liquid polymer and cured to form a transparent shield, this coating offers a glossy finish while safeguarding against scratches, UV damage, and environmental contaminants. With its hydrophobic properties, water, dirt, and grime simply bead off, ensuring easier cleaning and maintenance. Enhance the appearance and longevity of your vehicle with our ceramic coating service, providing lasting shine and superior protection for years to come.</p>
+                                        <p className='fs-4'>&emsp;&emsp;Our ceramic coating service offers a premium protective layer for your vehicle's exterior. Applied as a liquid polymer, it forms a glossy, transparent shield against scratches, UV damage, and contaminants. Its hydrophobic properties repel water, dirt, and grime, simplifying cleaning. Enhance your vehicle's appearance and longevity with our ceramic coating, providing lasting shine and superior protection for years.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -139,7 +139,7 @@ export default function LandingServicesList() {
                                 <Col md={6}>
                                     <div>
                                         <h2>Undercoating</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our undercoating service offers essential protection for the underside of your vehicle. Applied as a durable coating, it forms a barrier against moisture, salt, and road debris, safeguarding against rust and corrosion. By sealing vulnerable areas, our undercoating service helps extend the lifespan of your vehicle's frame and components, ensuring long-term reliability and safety on the road. Trust our expert team to provide comprehensive undercoating protection, keeping your vehicle resilient against harsh driving conditions and preserving its value for years to come.</p>
+                                        <p className='fs-4'>&emsp;&emsp;Our undercoating service provides vital protection for your vehicle's underside, forming a durable barrier against moisture, salt, and road debris to prevent rust and corrosion. By sealing vulnerable areas, it extends the lifespan of your vehicle's frame and components, ensuring long-term reliability and safety. Trust our expert team for comprehensive undercoating protection, preserving your vehicle's value in harsh conditions.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -154,7 +154,7 @@ export default function LandingServicesList() {
                                 <Col md={6}>
                                     <div>
                                         <h2>Interior Detailing</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our interior detailing service revitalizes the inside of your vehicle, ensuring a clean and comfortable driving experience. Using specialized techniques and products, we meticulously clean and sanitize all surfaces, including upholstery, carpets, and dashboard, removing dirt, stains, and odors. From vacuuming and shampooing to thorough surface wiping, our detailing service restores your vehicle's interior to a like-new condition, leaving it fresh, hygienic, and inviting. Experience the transformation with our interior detailing service, where attention to detail meets unmatched quality, ensuring your vehicle's interior looks and feels its best.</p>
+                                        <p className='fs-4'>&emsp;&emsp;Our interior detailing service ensures a fresh and comfortable driving experience by meticulously cleaning and sanitizing all surfaces, including upholstery, carpets, and the dashboard. With specialized techniques, we remove dirt, stains, and odors, restoring your vehicle's interior to a like-new condition. From vacuuming to thorough surface wiping, our attention to detail guarantees unmatched quality and a welcoming environment for your vehicle.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -169,7 +169,7 @@ export default function LandingServicesList() {
                                 <Col md={6}>
                                     <div>
                                         <h2>Exterior Detailing</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our exterior detailing service delivers unparalleled care and protection for your vehicle's outer surfaces, ensuring a stunning and well-maintained appearance. Using cutting-edge techniques and premium products, we meticulously clean, polish, and protect every inch of your vehicle's exterior, removing dirt, contaminants, and imperfections. From hand washing and clay bar treatment to paint correction and wax application, our detailing service enhances the shine and clarity of your vehicle's paint while providing long-lasting protection against the elements. Trust our expert team to deliver exceptional results with our exterior detailing service, ensuring your vehicle stands out with a flawless finish and unparalleled protection against environmental hazards.</p>
+                                        <p className='fs-4'>&emsp;&emsp;Our exterior detailing service provides top-notch care and protection for your vehicle's outer surfaces, ensuring a stunning appearance. Using advanced techniques and premium products, we clean, polish, and protect every inch, removing dirt and imperfections. From hand washing to paint correction and wax application, our service enhances shine and provides long-lasting protection. Trust our expert team for exceptional results.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -184,7 +184,7 @@ export default function LandingServicesList() {
                                 <Col md={6}>
                                     <div>
                                         <h2>Engine Wash</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our engine wash service provides comprehensive cleaning and maintenance for the heart of your vehicle. Utilizing specialized equipment and industry-leading techniques, we safely remove dirt, grease, and grime from your engine bay, restoring its appearance and functionality. Our meticulous process ensures that sensitive components are protected throughout the cleaning process, preserving performance and reliability. Experience the benefits of a clean and well-maintained engine with our engine wash service, enhancing both the aesthetics and longevity of your vehicle's vital components. Trust our expert team to deliver exceptional results, leaving your engine bay looking pristine and performing at its best.</p>
+                                        <p className='fs-4'>&emsp;&emsp;Our engine wash service offers thorough cleaning and maintenance for your vehicle's engine. Using specialized equipment and techniques, we remove dirt and grime safely, preserving sensitive components. This process enhances both appearance and functionality, ensuring optimal performance and longevity. Trust our expert team to deliver exceptional results, leaving your engine bay looking pristine and performing at its best.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -199,7 +199,7 @@ export default function LandingServicesList() {
                                 <Col md={6}>
                                     <div>
                                         <h2>Sanitation</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Introducing our vehicle disinfection service, utilizing state-of-the-art fogging technology to ensure a thorough and effective sanitization process. By dispersing a fine mist of disinfectant throughout the interior cabin, we reach even the most inaccessible areas, eliminating harmful bacteria, viruses, and allergens. Our eco-friendly disinfectant is safe for both passengers and vehicle materials, providing peace of mind and a healthier environment for everyone on board. Experience the power of our fogging disinfection service, where safety and cleanliness converge to create a hygienic sanctuary inside your vehicle. Trust our expert team to deliver exceptional results, leaving your vehicle's interior fresh, sanitized, and ready for your next journey.</p>
+                                        <p className='fs-4'>&emsp;&emsp;Introducing our vehicle disinfection service, utilizing state-of-the-art fogging technology for thorough sanitization. Our eco-friendly disinfectant mist reaches inaccessible areas, eliminating harmful bacteria, viruses, and allergens. Safe for passengers and materials, it ensures a healthier environment. Experience the power of our fogging service for a hygienic sanctuary inside your vehicle.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -214,7 +214,7 @@ export default function LandingServicesList() {
                                 <Col md={6}>
                                     <div>
                                         <h2>Waxing</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Introducing our vehicle waxing service, designed to elevate the appearance and protection of your vehicle's exterior surfaces. Using premium wax products and skilled techniques, we provide a meticulous application process that enhances the shine and depth of your vehicle's paintwork. Our waxing service not only creates a stunning glossy finish but also forms a protective barrier against environmental contaminants, UV rays, and minor scratches. Experience the transformative power of our waxing service, where each application brings out the brilliance of your vehicle's finish and ensures long-lasting protection against the elements. Trust our expert team to deliver exceptional results, leaving your vehicle with a showroom-worthy shine that turns heads wherever you go.</p>
+                                        <p className='fs-4'>&emsp;&emsp;Introducing our vehicle waxing service, enhancing both appearance and protection. With premium products and skilled techniques, we provide meticulous application for a glossy finish. This service forms a protective barrier against contaminants, UV rays, and scratches. Experience the transformative power of our waxing, delivering showroom-worthy shine and long-lasting protection.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -229,7 +229,7 @@ export default function LandingServicesList() {
                                 <Col md={6}>
                                     <div>
                                         <h2>Asphalt Removal</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Introducing our asphalt removal service, dedicated to restoring the pristine condition of your vehicle's exterior surfaces. Using specialized techniques and equipment, we effectively eliminate stubborn asphalt residue, tar, and road grime from your vehicle's paintwork, glass, and trim. Our meticulous process ensures thorough removal without causing any damage to your vehicle's finish, leaving it clean and free from unsightly blemishes. Experience the difference with our asphalt removal service, where attention to detail and expertise combine to rejuvenate your vehicle's appearance and maintain its pristine condition. Trust our skilled team to deliver exceptional results, ensuring your vehicle looks its best and stands out on the road.</p>
+                                        <p className='fs-4'>&emsp;&emsp;Introducing our asphalt removal service, restoring your vehicle's exterior surfaces to pristine condition. Using specialized techniques and equipment, we eliminate stubborn asphalt residue, tar, and road grime from paintwork, glass, and trim without causing damage. Experience the difference with our meticulous process, rejuvenating your vehicle's appearance.</p>
                                     </div>
                                 </Col>
                             </Row>
