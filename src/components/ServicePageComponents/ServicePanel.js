@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
-import image from '../../assets/deal-03.jpg';
+import myimage from '../../assets/deal-03.jpg';
 import { Link } from 'react-router-dom';
 
-export default function ServicePanel({ name, location, address, service, tags }) {
+export default function ServicePanel({ image, name, location, address, service, tags }) {
 
     const handleScheduleVisit = () => {
         localStorage.setItem('serviceDetails', JSON.stringify({ name, location, address, service, tags }));
@@ -11,7 +11,7 @@ export default function ServicePanel({ name, location, address, service, tags })
 
     return (
         <div className='bg-secondary bg-opacity-10 rounded-3 p-4' style={{ width: '400px' }}>
-            <img src={image} className='w-100 rounded-3 mb-3 text-center' alt="Service" />
+            <img src={myimage} className='w-100 rounded-3 mb-3 text-center' alt="Service" />
             <div style={{ height: '200px' }}>
                 <div className='fw-semibold px-3 py-1 d-inline-block bg-opacity-50 bg-primary rounded-3'>
                     {name}
