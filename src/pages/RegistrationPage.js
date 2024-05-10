@@ -33,17 +33,14 @@ const RegistrationPage = () => {
       return;
     }
 
-    // Check if user already exists with the same email
     const userQuery = query(collection(firestore, "users"), where("email", "==", email));
     const querySnapshot = await getDocs(userQuery);
     if (!querySnapshot.empty) {
-      // User already exists
       setShowModal(true);
       setModalMessage("User with this email already exists.");
       return;
     }
 
-    // If user doesn't exist, proceed with user creation
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const userId = userCredential.user.uid;
@@ -51,7 +48,6 @@ const RegistrationPage = () => {
       await setDoc(userDocRef, {
         name: username,
         email: email,
-        // Add any other user data fields here
       });
       console.log("User registered successfully");
       navigate("/login");

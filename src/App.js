@@ -12,6 +12,7 @@ import LoginPage from './pages/LoginPage.js';
 import RegistrationPage from './pages/RegistrationPage.js';
 import AuthDetails from './pages/AuthDetails.js';
 import './App.css';
+import ProfilePage from './pages/ProfilePage.js';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/schedule" element={<SchedulePage />} />
             <Route path="/authDetails" element={<AuthDetails />} />
+            <Route path="/profile" element={<ProfilePage />} />
           </Routes>
         </div>
       </AuthProvider>
