@@ -18,7 +18,6 @@ export default function BookingPage() {
 
         const querySnapshot = await getDocs(q);
         
-        // Extract data from query snapshot and format into bookings array
         const bookingsData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           name: doc.data().name,
@@ -28,7 +27,6 @@ export default function BookingPage() {
           selectedTags: doc.data().selectedTags,
         }));
 
-        // Update state with the formatted bookings data
         setBookings(bookingsData);
       } catch (error) {
         console.error('Error fetching bookings:', error);
@@ -62,7 +60,7 @@ export default function BookingPage() {
             <Col>{booking.address}</Col>
             <Col>{booking.date}</Col>
             <Col>{booking.time}</Col>
-            <Col>{booking.selectedTags.join(', ')}</Col> {/* Convert array to string for display */}
+            <Col>{booking.selectedTags.join(', ')}</Col>
           </Row>
         ))}
       </div>
