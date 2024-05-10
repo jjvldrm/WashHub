@@ -86,7 +86,7 @@ export default function Header() {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link to="/" className="nav-link text-white fs-10">Home</Link>
+                                <Link to="/" className="nav-link text-white fs-5">Home</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/services" className="nav-link text-white fs-5">Services</Link>
