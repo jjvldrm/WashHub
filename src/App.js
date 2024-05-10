@@ -16,21 +16,23 @@ import ProfilePage from './pages/ProfilePage.js';
 
 export default function App() {
   return (
-    <Router>
-      <AuthProvider>
-        <div>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/services" element={<ServicePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegistrationPage />} />
-            <Route path="/booking" element={<BookingPage />} />
-            <Route path="/schedule" element={<SchedulePage />} />
-            <Route path="/authDetails" element={<AuthDetails />} />
-            <Route path="/profile" element={<ProfilePage />} />
-          </Routes>
-        </div>
-      </AuthProvider>
-    </Router>
+    <>
+      <Router>
+        <AuthProvider>
+          <div>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/services" element={<ServicePage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegistrationPage />} />
+              <Route path="/booking" element={<BookingPage />} />
+              <Route path="/schedule" element={<SchedulePage />} />
+              <Route path="/authDetails" element={<AuthDetails />} />
+              <Route path="/profile" element={<ProfilePage />} />
+            </Routes>
+          </div>
+        </AuthProvider>
+      </Router>
+    </>
   );
 }
