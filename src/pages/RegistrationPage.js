@@ -5,6 +5,8 @@ import { Button, Modal } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore";
 import { collection, query, where, getDocs } from "firebase/firestore";
+import washHubLogo from '../assets/HubLogo.png';
+import './LoginReg.css';
 
 const RegistrationPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -59,11 +61,13 @@ const RegistrationPage = () => {
   return (
     <div className="loginPage-bg-with-image vh-100 d-flex align-items-center justify-content-center">
       <div className="container rounded-4 bg-black bg-opacity-75 text-white d-flex flex-column p-4" style={{ maxWidth: '600px' }}>
-        <div>
-          <h2 className="text-center">WashHub</h2>
+        <div className="logo-container">
+          
+          <img className='logo1' src={washHubLogo} /> 
+
         </div>
         <form onSubmit={register}>
-          <h3 className="mt-5 fw-bold text-center mb-4">Creating an Account</h3 >
+          <h3 className="mt-4 fw-bold text-center mb-4">Creating an Account</h3 >
           <div className="my-3 d-flex justify-content-center">
             <input
               type="email"

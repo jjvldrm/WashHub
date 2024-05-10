@@ -1,0 +1,14 @@
+.logo-container {
+    text-align: center; /* Center the image horizontally */
+  }
+  
+  .logo1 {
+    display: block; /* Ensure the image is treated as a block element */
+    margin: auto; /* Set margin auto to center the image horizontally */
+    width: 300px;
+    height: auto;
+  }
+
+.login {
+    font-family: "Typographica", sans-serif; /* Change Fonts */
+}
