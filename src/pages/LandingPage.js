@@ -22,7 +22,7 @@ export default function LandingPage() {
       </div>
 
       <LandingServicesList />
-      <footer className='bg-black bg-opacity-10 h-100 py-5 mt-5'>
+      <footer className='bg-black bg-opacity-10 h-10 py-5 mt-5'>
         &nbsp;
       </footer>
     </div>
