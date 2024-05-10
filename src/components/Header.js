@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth, firestore } from "../backend/firebase";
 import { Modal, Button } from "react-bootstrap";
 import { doc, getDoc } from "firebase/firestore";
@@ -27,6 +27,7 @@ const SignOutConfirmationModal = ({ show, onHide, onConfirm }) => {
 export default function Header() {
     const [authUser, setAuthUser] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -37,7 +38,7 @@ export default function Header() {
                     const userDocRef = doc(firestore, "users", user.uid);
                     
                     const docSnapshot = await getDoc(userDocRef);
-                    console.log("Document Snapshot:", docSnapshot.data()); // Log the document snapshot
+                    console.log("Document Snapshot:", docSnapshot.data());
                     if (docSnapshot.exists()) {
                         const userData = docSnapshot.data();
                         setAuthUser(prevState => ({ ...prevState, name: userData.name }));
@@ -58,6 +59,7 @@ export default function Header() {
     const handleSignOut = () => {
         signOut(auth)
             .then(() => {
+                navigate('/');
                 handleHideModal();
                 console.log("Sign out successful");
             })

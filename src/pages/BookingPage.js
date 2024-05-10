@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import BookingTitle from '../components/BookingPageComponents/BookingTitle';
 import { Col, Row } from 'react-bootstrap';
 import { auth, firestore } from '../backend/firebase';
-import { doc, where, getDocs } from 'firebase/firestore';
+import { query, collection, where, getDocs } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
 
 export default function BookingPage() {
   const [bookings, setBookings] = useState([]);
@@ -13,39 +14,41 @@ export default function BookingPage() {
       try {
         const userEmail = auth.currentUser.email;
 
-        const q = doc(firestore, "users", userEmail.userEmail);
+        const q = query(collection(firestore, 'bookings'), where('userEmail', '==', userEmail));
 
         const querySnapshot = await getDocs(q);
-        console.log("Document Snapshot:", querySnapshot.data());
-
-        // Map the documents to booking objects
-        const userBookings = querySnapshot.docs.map((doc) => ({
+        
+        // Extract data from query snapshot and format into bookings array
+        const bookingsData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
-          ...doc.data()
+          name: doc.data().name,
+          address: doc.data().address,
+          date: doc.data().date,
+          time: doc.data().time,
+          selectedTags: doc.data().selectedTags,
         }));
 
-        // Update state with user's bookings
-        setBookings(userBookings);
+        // Update state with the formatted bookings data
+        setBookings(bookingsData);
       } catch (error) {
         console.error('Error fetching bookings:', error);
       }
     };
 
-    // Call the fetchBookings function when component mounts
     fetchBookings();
   }, []);
 
   return (
     <div>
-      <div className='bookPage-bg-with-image'>
-        <div className='bg-black bg-opacity-10'>
+      <div className="bookPage-bg-with-image">
+        <div className="bg-black bg-opacity-10">
           <Header />
         </div>
         <BookingTitle />
         <hr />
       </div>
-      <div className='container border border-subtle rounded-4'>
-        <Row className='bg-secondary bg-opacity-10 border-bottom p-2 text-center'>
+      <div className="container border border-subtle rounded-4">
+        <Row className="bg-secondary bg-opacity-10 border-bottom p-2 text-center">
           <Col>Carwash Name</Col>
           <Col>Location</Col>
           <Col>Appointment Date</Col>
@@ -54,12 +57,12 @@ export default function BookingPage() {
         </Row>
 
         {bookings.map((booking) => (
-          <Row key={booking.id} className='text-center p-2'>
+          <Row key={booking.id} className="text-center p-2">
             <Col>{booking.name}</Col>
             <Col>{booking.address}</Col>
             <Col>{booking.date}</Col>
             <Col>{booking.time}</Col>
-            <Col>{booking.services}</Col>
+            <Col>{booking.selectedTags.join(', ')}</Col> {/* Convert array to string for display */}
           </Row>
         ))}
       </div>
