@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { auth, firestore } from "../backend/firebase";
 import { Modal, Button } from "react-bootstrap";
 import { doc, getDoc } from "firebase/firestore";
+import './Header.css';
+import washHubLogo from "../assets/HubLogo.png"
 
 const SignOutConfirmationModal = ({ show, onHide, onConfirm }) => {
     return (
@@ -75,14 +77,16 @@ export default function Header() {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light px-5">
                 <div className="container-fluid">
-                    <Link to="/" className="navbar-brand text-white fs-2">WashHub</Link>
+
+                    <Link to="/" ><img className='logo mt-2 mb-2' src={washHubLogo}/></Link>
+
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link to="/" className="nav-link text-white fs-5">Home</Link>
+                                <Link to="/" className="nav-link text-white fs-10">Home</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/services" className="nav-link text-white fs-5">Services</Link>

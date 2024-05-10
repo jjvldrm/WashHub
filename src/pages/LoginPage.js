@@ -4,6 +4,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Modal } from "react-bootstrap";
 import { BiChevronLeft } from 'react-icons/bi';
+import washHubLogo from '../assets/HubLogo.png';
+import './LoginReg.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -35,10 +37,15 @@ const LoginPage = () => {
             <BiChevronLeft />Back
           </Link>
 
-          <h2 className="text-center">WashHub</h2>
+          <div className="logo-container">
+
+            <img className='logo1' src={washHubLogo} /> 
+
+          </div>
+
         </div>
         <form onSubmit={login}>
-          <h3 className="mt-5 fw-bold text-center mb-4">Login</h3 >
+          <h3 className="login mt-4 fw-bold text-center mb-4">Login</h3 >
           <div className="my-3 d-flex justify-content-center">
             <input
               type="email"
