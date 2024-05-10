@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function LandingTitle() {
     const [isHovered, setIsHovered] = useState(false);
     const handleScroll = () => {
         const element = document.getElementById('above-nav-tab');
         if (element) {
-          element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
-      };
+    };
     return (
         <div className='LandingPage'>
             <div className='container text-white text-center fs-2 fw-normal'>
@@ -23,9 +24,11 @@ export default function LandingTitle() {
                 Make Washing More Convenient
             </div>
             <div className='text-center'>
-                <Button variant="primary" className='rounded-5 fw-semibold fs-4 px-4 py-2'>
-                    Book Now
-                </Button>
+                <Link to={'/services'}>
+                    <Button variant="primary" className='rounded-5 fw-semibold fs-4 px-4 py-2'>
+                        Book Now
+                    </Button>
+                </Link>
             </div>
             <div className='text-center rounded-5 p-3'
                 style={{

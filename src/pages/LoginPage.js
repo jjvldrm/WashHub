@@ -29,7 +29,7 @@ const LoginPage = () => {
 
   return (
     <div className="loginPage-bg-with-image vh-100 d-flex align-items-center justify-content-center">
-      <div className="container rounded-4 bg-black bg-opacity-75 text-white d-flex flex-column p-4" style={{ width: '40%' }}>
+      <div className="container rounded-4 bg-black bg-opacity-75 text-white d-flex flex-column p-4" style={{ maxWidth: '600px' }}>
         <div>
           <Link to={{pathname: '/'}} style={{textDecoration: 'none', color: 'white', fontWeight: '600'}}>
             <BiChevronLeft />Back

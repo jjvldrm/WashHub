@@ -79,3 +79,16 @@ html {
 .pointer{
   cursor: "pointer";
 }
+
+.loading-animation {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
