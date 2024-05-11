@@ -18,6 +18,7 @@ function SchedulePage() {
     const [selectedTime, setSelectedTime] = useState('');
     const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
+    const [showErrorModal, setShowErrorModal] = useState(false);
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
@@ -52,9 +53,17 @@ function SchedulePage() {
     const handleBookAppointment = () => {
         if (!user) {
             navigate('/login');
+        } else if (selectedTags.length === 0) {
+            setShowErrorModal(true);
         } else {
+            const defaultTime = '08:00 AM';
+            setSelectedTime(prevTime => prevTime || defaultTime);
             setShowModal(true);
         }
+    };
+
+    const handleCloseErrorModal = () => {
+        setShowErrorModal(false);
     };
 
     const goBack = () => {
@@ -80,7 +89,7 @@ function SchedulePage() {
             time: selectedTime,
             userEmail: user ? user.email : null
         };
-    
+
         try {
             await addDoc(collection(firestore, 'bookings'), bookingData);
             console.log("Booking data saved successfully");
@@ -91,7 +100,7 @@ function SchedulePage() {
             toast.error('Failed to save booking. Please try again later.');
         }
     };
-    
+
 
     return (
         <div>
@@ -199,6 +208,20 @@ function SchedulePage() {
                     </Button>
                     <Button variant="primary" onClick={confirmBooking}>
                         Confirm
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+            <Modal show={showErrorModal} onHide={handleCloseErrorModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Error</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>Please select at least one service before booking.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseErrorModal}>
+                        Close
                     </Button>
                 </Modal.Footer>
             </Modal>
