@@ -34,10 +34,6 @@ html {
   background-repeat: no-repeat;
 }
 
-.gradient-bg {
-  background: linear-gradient(to bottom right, #5fa4ff, #7b8ffe);
-}
-
 .LandingPage{
     z-index: 2;
 }
@@ -65,8 +61,8 @@ html {
 }
 
 .nav-link:hover {
-  color: #0d6efd !important;
-  text-decoration: none !important;
+  color: #0d6efd !important; /* Change to your primary color */
+  text-decoration: none !important; /* Remove underline */
 }
 
 .service-panel {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { auth } from "../backend/firebase.js";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Modal } from "react-bootstrap";
 import { BiChevronLeft } from 'react-icons/bi';
 import washHubLogo from '../assets/HubLogo.png';
@@ -10,29 +10,22 @@ import './LoginReg.css';
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showEmptyModal, setShowEmptyModal] = useState(false);
-  const [showEmailNotExistModal, setShowEmailNotExistModal] = useState(false);
-  const [showWrongPasswordModal, setShowWrongPasswordModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   const login = (e) => {
     e.preventDefault();
     if (!email || !password) {
-      setShowEmptyModal(true);
+      setShowModal(true); // Show modal error if email or password is empty
       return;
     }
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
-        window.location.href = "/";
+        navigate("/");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        if (errorCode === "auth/invalid-credential") {
-          console.log(error);
-          setShowWrongPasswordModal(true);
-        } else {
-          console.log(error);
-        }
+        console.log(error);
       });
   };
 
@@ -40,7 +33,7 @@ const LoginPage = () => {
     <div className="loginPage-bg-with-image vh-100 d-flex align-items-center justify-content-center">
       <div className="container rounded-4 bg-black bg-opacity-75 text-white d-flex flex-column p-4" style={{ maxWidth: '600px' }}>
         <div>
-          <Link to={{ pathname: '/' }} style={{ textDecoration: 'none', color: 'white', fontWeight: '600' }}>
+          <Link to={{pathname: '/'}} style={{textDecoration: 'none', color: 'white', fontWeight: '600'}}>
             <BiChevronLeft />Back
           </Link>
 
@@ -89,27 +82,14 @@ const LoginPage = () => {
         </div>
       </div>
 
-      {/* Modal Error for Empty Fields */}
-      <Modal show={showEmptyModal} onHide={() => setShowEmptyModal(false)}>
+      {/* Modal Error */}
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Error</Modal.Title>
         </Modal.Header>
         <Modal.Body>Please enter your email and password.</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowEmptyModal(false)}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
-
-      {/* Modal Error for Wrong Password */}
-      <Modal show={showWrongPasswordModal} onHide={() => setShowWrongPasswordModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Error</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Invalid email or password.</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowWrongPasswordModal(false)}>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
             Close
           </Button>
         </Modal.Footer>
