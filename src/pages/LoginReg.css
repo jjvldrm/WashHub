@@ -10,5 +10,28 @@
   }
 
 .login {
-    font-family: "Typographica", sans-serif; /* Change Fonts */
+    font-family: "JosefinSans", sans-serif; /* Change Fonts */
+}
+
+.landing {
+  font-family: "Landasans", sans-serif;
+}
+
+.jumbox {
+  font-family: "Jumbox", sans-serif;
+}
+
+@font-face {
+  font-family: Jumbox;
+  src: url(../assets/Jumbox-ZVLMZ.ttf);
+}
+
+@font-face {
+  font-family: JosefinSans;
+  src: url(../assets/JosefinSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Landasans;
+  src: url(../assets/LandasansMedium-ALJ6m.otf);
 }

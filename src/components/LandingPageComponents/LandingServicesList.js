@@ -107,8 +107,8 @@ export default function LandingServicesList() {
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Carwash</h2>
-                                        <p className='fs-4'>&emsp;&emsp;A car wash service provides comprehensive cleaning and maintenance for vehicles, addressing exterior and interior needs. Using specialized equipment and cleaning agents, it removes dirt and grime while protecting the paint. Internally, vacuuming and surface wiping ensure cleanliness, with additional options like shampooing and protective treatments available for thorough interior care.</p>
+                                        <h2 className='jumbox fs-2 mt-3 mb-3 fw-light'>Carwash</h2>
+                                        <p className='fs-4 fw-light'>&emsp;&emsp;A car wash service provides comprehensive cleaning and maintenance for vehicles, addressing exterior and interior needs. Using specialized equipment and cleaning agents, it removes dirt and grime while protecting the paint. Internally, vacuuming and surface wiping ensure cleanliness, with additional options like shampooing and protective treatments available for thorough interior care.</p>
                                        
                                     </div>
                                 </Col>
@@ -123,8 +123,8 @@ export default function LandingServicesList() {
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Ceramic Coating</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our ceramic coating service offers a premium protective layer for your vehicle's exterior. Applied as a liquid polymer, it forms a glossy, transparent shield against scratches, UV damage, and contaminants. Its hydrophobic properties repel water, dirt, and grime, simplifying cleaning. Enhance your vehicle's appearance and longevity with our ceramic coating, providing lasting shine and superior protection for years.</p>
+                                        <h2 className='jumbox fs-2 mt-3 mb-3 fw-medium'>Ceramic Coating</h2>
+                                        <p className='fs-4 fw-light'>&emsp;&emsp;Our ceramic coating service offers a premium protective layer for your vehicle's exterior. Applied as a liquid polymer, it forms a glossy, transparent shield against scratches, UV damage, and contaminants. Its hydrophobic properties repel water, dirt, and grime, simplifying cleaning. Enhance your vehicle's appearance and longevity with our ceramic coating, providing lasting shine and superior protection for years.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -138,8 +138,8 @@ export default function LandingServicesList() {
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Undercoating</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our undercoating service provides vital protection for your vehicle's underside, forming a durable barrier against moisture, salt, and road debris to prevent rust and corrosion. By sealing vulnerable areas, it extends the lifespan of your vehicle's frame and components, ensuring long-term reliability and safety. Trust our expert team for comprehensive undercoating protection, preserving your vehicle's value in harsh conditions.</p>
+                                        <h2 className='jumbox fs-2 mt-3 mb-3 fw-medium'>Undercoating</h2>
+                                        <p className='fs-4 fw-light'>&emsp;&emsp;Our undercoating service provides vital protection for your vehicle's underside, forming a durable barrier against moisture, salt, and road debris to prevent rust and corrosion. By sealing vulnerable areas, it extends the lifespan of your vehicle's frame and components, ensuring long-term reliability and safety. Trust our expert team for comprehensive undercoating protection, preserving your vehicle's value in harsh conditions.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -153,8 +153,8 @@ export default function LandingServicesList() {
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Interior Detailing</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our interior detailing service ensures a fresh and comfortable driving experience by meticulously cleaning and sanitizing all surfaces, including upholstery, carpets, and the dashboard. With specialized techniques, we remove dirt, stains, and odors, restoring your vehicle's interior to a like-new condition. From vacuuming to thorough surface wiping, our attention to detail guarantees unmatched quality and a welcoming environment for your vehicle.</p>
+                                        <h2 className='jumbox fs-2 mt-3 mb-3 fw-medium'>Interior Detailing</h2>
+                                        <p className='fs-4 fw-light'>&emsp;&emsp;Our interior detailing service ensures a fresh and comfortable driving experience by meticulously cleaning and sanitizing all surfaces, including upholstery, carpets, and the dashboard. With specialized techniques, we remove dirt, stains, and odors, restoring your vehicle's interior to a like-new condition. From vacuuming to thorough surface wiping, our attention to detail guarantees unmatched quality and a welcoming environment for your vehicle.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -168,8 +168,8 @@ export default function LandingServicesList() {
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Exterior Detailing</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our exterior detailing service provides top-notch care and protection for your vehicle's outer surfaces, ensuring a stunning appearance. Using advanced techniques and premium products, we clean, polish, and protect every inch, removing dirt and imperfections. From hand washing to paint correction and wax application, our service enhances shine and provides long-lasting protection. Trust our expert team for exceptional results.</p>
+                                        <h2 className='jumbox fs-2 mt-3 mb-3 fw-medium'>Exterior Detailing</h2>
+                                        <p className='fs-4 fw-light'>&emsp;&emsp;Our exterior detailing service provides top-notch care and protection for your vehicle's outer surfaces, ensuring a stunning appearance. Using advanced techniques and premium products, we clean, polish, and protect every inch, removing dirt and imperfections. From hand washing to paint correction and wax application, our service enhances shine and provides long-lasting protection. Trust our expert team for exceptional results.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -183,8 +183,8 @@ export default function LandingServicesList() {
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Engine Wash</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Our engine wash service offers thorough cleaning and maintenance for your vehicle's engine. Using specialized equipment and techniques, we remove dirt and grime safely, preserving sensitive components. This process enhances both appearance and functionality, ensuring optimal performance and longevity. Trust our expert team to deliver exceptional results, leaving your engine bay looking pristine and performing at its best.</p>
+                                        <h2 className='jumbox fs-2 mt-3 mb-3 fw-medium'>Engine Wash</h2>
+                                        <p className='fs-4 fw-light'>&emsp;&emsp;Our engine wash service offers thorough cleaning and maintenance for your vehicle's engine. Using specialized equipment and techniques, we remove dirt and grime safely, preserving sensitive components. This process enhances both appearance and functionality, ensuring optimal performance and longevity. Trust our expert team to deliver exceptional results, leaving your engine bay looking pristine and performing at its best.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -198,8 +198,8 @@ export default function LandingServicesList() {
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Sanitation</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Introducing our vehicle disinfection service, utilizing state-of-the-art fogging technology for thorough sanitization. Our eco-friendly disinfectant mist reaches inaccessible areas, eliminating harmful bacteria, viruses, and allergens. Safe for passengers and materials, it ensures a healthier environment. Experience the power of our fogging service for a hygienic sanctuary inside your vehicle.</p>
+                                        <h2 className='jumbox fs-2 mt-3 mb-3 fw-medium'>Sanitation</h2>
+                                        <p className='fs-4 fw-light'>&emsp;&emsp;Introducing our vehicle disinfection service, utilizing state-of-the-art fogging technology for thorough sanitization. Our eco-friendly disinfectant mist reaches inaccessible areas, eliminating harmful bacteria, viruses, and allergens. Safe for passengers and materials, it ensures a healthier environment. Experience the power of our fogging service for a hygienic sanctuary inside your vehicle.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -213,8 +213,8 @@ export default function LandingServicesList() {
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Waxing</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Introducing our vehicle waxing service, enhancing both appearance and protection. With premium products and skilled techniques, we provide meticulous application for a glossy finish. This service forms a protective barrier against contaminants, UV rays, and scratches. Experience the transformative power of our waxing, delivering showroom-worthy shine and long-lasting protection.</p>
+                                        <h2 className='jumbox fs-2 mt-3 mb-3 fw-medium'>Waxing</h2>
+                                        <p className='fs-4 fw-light'>&emsp;&emsp;Introducing our vehicle waxing service, enhancing both appearance and protection. With premium products and skilled techniques, we provide meticulous application for a glossy finish. This service forms a protective barrier against contaminants, UV rays, and scratches. Experience the transformative power of our waxing, delivering showroom-worthy shine and long-lasting protection.</p>
                                     </div>
                                 </Col>
                             </Row>
@@ -228,8 +228,8 @@ export default function LandingServicesList() {
                                 </Col>
                                 <Col md={6}>
                                     <div>
-                                        <h2>Asphalt Removal</h2>
-                                        <p className='fs-4'>&emsp;&emsp;Introducing our asphalt removal service, restoring your vehicle's exterior surfaces to pristine condition. Using specialized techniques and equipment, we eliminate stubborn asphalt residue, tar, and road grime from paintwork, glass, and trim without causing damage. Experience the difference with our meticulous process, rejuvenating your vehicle's appearance.</p>
+                                        <h2 className='jumbox fs-2 mt-3 mb-3 fw-medium'>Asphalt Removal</h2>
+                                        <p className='fs-4 fw-light'>&emsp;&emsp;Introducing our asphalt removal service, restoring your vehicle's exterior surfaces to pristine condition. Using specialized techniques and equipment, we eliminate stubborn asphalt residue, tar, and road grime from paintwork, glass, and trim without causing damage. Experience the difference with our meticulous process, rejuvenating your vehicle's appearance.</p>
                                     </div>
                                 </Col>
                             </Row>
