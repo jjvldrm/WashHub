@@ -75,7 +75,7 @@ export default function ProfilePage() {
 
     return (
         <div>
-            <div className="gradient-bg ">
+            <div className="landingPage-bg-with-image">
                 <div className="bg-black bg-opacity-10">
                     <Header />
                 </div>

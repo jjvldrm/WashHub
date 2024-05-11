@@ -1,4 +1,5 @@
 import React from 'react'
+import "./ProfileTitle.css"
 
 export default function ProfileTitle() {
     return (
