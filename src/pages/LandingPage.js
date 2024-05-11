@@ -7,6 +7,7 @@ export default function LandingPage() {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
+    // Set fade in to true after component mounts
     setFadeIn(true);
   }, []);
 

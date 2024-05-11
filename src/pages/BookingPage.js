@@ -4,6 +4,7 @@ import BookingTitle from '../components/BookingPageComponents/BookingTitle';
 import { Col, Row } from 'react-bootstrap';
 import { auth, firestore } from '../backend/firebase';
 import { query, collection, where, getDocs } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
 
 export default function BookingPage() {
   const [bookings, setBookings] = useState([]);
@@ -12,8 +13,11 @@ export default function BookingPage() {
     const fetchBookings = async () => {
       try {
         const userEmail = auth.currentUser.email;
+
         const q = query(collection(firestore, 'bookings'), where('userEmail', '==', userEmail));
+
         const querySnapshot = await getDocs(q);
+        
         const bookingsData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           name: doc.data().name,
@@ -22,23 +26,14 @@ export default function BookingPage() {
           time: doc.data().time,
           selectedTags: doc.data().selectedTags,
         }));
+
         setBookings(bookingsData);
-        // Save bookings to localStorage
-        localStorage.setItem('bookings', JSON.stringify(bookingsData));
       } catch (error) {
         console.error('Error fetching bookings:', error);
       }
     };
 
     fetchBookings();
-  }, []);
-
-  // Load bookings from localStorage on initial render
-  useEffect(() => {
-    const storedBookings = JSON.parse(localStorage.getItem('bookings'));
-    if (storedBookings) {
-      setBookings(storedBookings);
-    }
   }, []);
 
   return (
