@@ -36,15 +36,15 @@ export default function ServicePage() {
 
       <div className='d-flex justify-content-center mx-5 gap-3 mt-5' id='filtered-section'>
         <Button onClick={() => { handleScroll(); setSelectedService(null); }}>Show All</Button>
-        <Button onClick={() => { handleScroll(); setSelectedService("Carwash"); }}>Car Wash</Button>
-        <Button onClick={() => { handleScroll(); setSelectedService("Ceramic Coating"); }}>Ceramic Coating</Button>
-        <Button onClick={() => { handleScroll(); setSelectedService("Undercoating"); }}>Undercoating</Button>
-        <Button onClick={() => { handleScroll(); setSelectedService("Interior Detailing"); }}>Interior Detailing</Button>
-        <Button onClick={() => { handleScroll(); setSelectedService("Exterior Detailing"); }}>Exterior Detailing</Button>
-        <Button onClick={() => { handleScroll(); setSelectedService("Engine Wash"); }}>Engine Wash</Button>
-        <Button onClick={() => { handleScroll(); setSelectedService("Sanitation"); }}>Sanitation</Button>
-        <Button onClick={() => { handleScroll(); setSelectedService("Waxing"); }}>Waxing</Button>
-        <Button onClick={() => { handleScroll(); setSelectedService("Asphalt Removal"); }}>Asphalt Removal</Button>
+        <Button onClick={() => { handleScroll(); setSelectedService("Carwash"); }} variant={selectedService === "Carwash" ? "warning" : "primary"}>Car Wash</Button>
+        <Button onClick={() => { handleScroll(); setSelectedService("Ceramic Coating"); }}  variant={selectedService === "Ceramic Coating" ? "warning" : "primary"}>Ceramic Coating</Button>
+        <Button onClick={() => { handleScroll(); setSelectedService("Undercoating"); }}  variant={selectedService === "Undercoating" ? "warning" : "primary"}>Undercoating</Button>
+        <Button onClick={() => { handleScroll(); setSelectedService("Interior Detailing"); }}  variant={selectedService === "Interior Detailing" ? "warning" : "primary"}>Interior Detailing</Button>
+        <Button onClick={() => { handleScroll(); setSelectedService("Exterior Detailing"); }}  variant={selectedService === "Exterior Detailing" ? "warning" : "primary"}>Exterior Detailing</Button>
+        <Button onClick={() => { handleScroll(); setSelectedService("Engine Wash"); }}  variant={selectedService === "Engine Wash" ? "warning" : "primary"}>Engine Wash</Button>
+        <Button onClick={() => { handleScroll(); setSelectedService("Sanitation"); }}  variant={selectedService === "Sanitation" ? "warning" : "primary"}>Sanitation</Button>
+        <Button onClick={() => { handleScroll(); setSelectedService("Waxing"); }}  variant={selectedService === "Waxing" ? "warning" : "primary"}>Waxing</Button>
+        <Button onClick={() => { handleScroll(); setSelectedService("Asphalt Removal"); }}  variant={selectedService === "Asphalt Removal" ? "warning" : "primary"}>Asphalt Removal</Button>
       </div>
       <div className='container py-5'>
         <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 gap-4 d-flex justify-content-center'>

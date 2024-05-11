@@ -16,11 +16,11 @@ export default function LandingTitle() {
     return (
         <div className='LandingPage'>
             <div className='container text-white text-center fs-2 fw-normal'>
-                <span class="line-before-after" style={{ letterSpacing: '8px' }}>
+                <span class="text-warning line-before-after" style={{ letterSpacing: '8px' }}>
                     WASH HUB
                 </span>
             </div>
-            <div className='text-white text-center fs-1 fw-semibold my-5'>
+            <div className='login text-white text-center fs-1 fw-light my-5'>
                 Make Washing More Convenient
             </div>
             <div className='text-center'>

@@ -86,18 +86,18 @@ export default function Header() {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link to="/" className="nav-link text-white fs-5">Home</Link>
+                                <Link to="/" className="options nav-link text-warning fs-5">HOME</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/services" className="nav-link text-white fs-5">Services</Link>
+                                <Link to="/services" className="options nav-link text-white fs-5">SERVICES</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/about" className="nav-link text-white fs-5">About</Link>
+                                <Link to="/about" className="options nav-link text-white fs-5">ABOUT</Link>
                             </li>
                             {authUser ? (
                                 <li className="nav-item">
                                     <li className="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle text-white fs-5 fw-normal" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a className="options nav-link dropdown-toggle text-info fs-5 fw-normal" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {authUser.name}
                                         </a>
                                         <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
@@ -109,7 +109,7 @@ export default function Header() {
                                 </li>
                             ) : (
                                 <li className="nav-item">
-                                    <Link to="/login" className="nav-link text-white fs-5">Login</Link>
+                                    <Link to="/login" className="options nav-link text-info fs-5">LOGIN</Link>
                                 </li>
                             )}
                         </ul>
