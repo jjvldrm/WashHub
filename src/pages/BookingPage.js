@@ -51,7 +51,7 @@ export default function BookingPage() {
         <hr />
       </div>
       <div className="container border border-subtle rounded-4">
-        <Row className="bg-secondary bg-opacity-10 border-bottom p-2 text-center">
+        <Row className="bg-secondary bg-opacity-10 border-bottom p-2 text-center fw-semibold">
           <Col>Carwash Name</Col>
           <Col>Location</Col>
           <Col>Appointment Date</Col>
