@@ -63,18 +63,18 @@ const RegistrationPage = () => {
       <div className="container rounded-4 bg-black bg-opacity-75 text-white d-flex flex-column p-4" style={{ maxWidth: '600px' }}>
         <div className="logo-container">
           
-          <img className='logo1' src={washHubLogo} /> 
+          <img className='logo1 mt-3' src={washHubLogo} /> 
 
         </div>
         <form onSubmit={register}>
-          <h3 className="mt-4 fw-bold text-center mb-4">Creating an Account</h3 >
+          <h3 className="login mt-4 fw-medium text-center mb-4">Create Account</h3 >
           <div className="my-3 d-flex justify-content-center">
             <input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{ width: '400px', padding: '5px', border: '1px solid #ccc', borderRadius: '5px' }}
+              style={{ width: '400px', padding: '8px', border: '1px solid #ccc', borderRadius: '5px' }}
             />
           </div>
 
@@ -84,7 +84,7 @@ const RegistrationPage = () => {
               placeholder="Enter your username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              style={{ width: '400px', padding: '5px', border: '1px solid #ccc', borderRadius: '5px' }}
+              style={{ width: '400px', padding: '8px', border: '1px solid #ccc', borderRadius: '5px' }}
             />
           </div>
 
@@ -94,7 +94,7 @@ const RegistrationPage = () => {
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              style={{ width: '400px', padding: '5px', border: '1px solid #ccc', borderRadius: '5px' }}
+              style={{ width: '400px', padding: '8px', border: '1px solid #ccc', borderRadius: '5px' }}
             />
           </div>
 
@@ -104,7 +104,7 @@ const RegistrationPage = () => {
               placeholder="Confirm your password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              style={{ width: '400px', padding: '5px', border: '1px solid #ccc', borderRadius: '5px' }}
+              style={{ width: '400px', padding: '8px', border: '1px solid #ccc', borderRadius: '5px' }}
             />
           </div>
 
@@ -112,13 +112,13 @@ const RegistrationPage = () => {
             <Button
               type="submit"
               className="my-3"
-              style={{ width: '70%', padding: '5px' }}
+              style={{ width: '50%', padding: '5px' }}
             >
               Register
             </Button>
           </div>
         </form>
-        <div className="text-center">
+        <div className="text-center mt-3">
           Already have an account? <Link to={{ pathname: `/login` }}>Log into an Account.</Link>
         </div>
       </div>

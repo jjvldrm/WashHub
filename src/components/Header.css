@@ -2,3 +2,11 @@
     width: 200px;
     height: auto;
 }
+
+.options {
+    font-family: "JosefinSans", sans-serif;
+}
+
+.nav-item {
+    margin-left: 10px;
+}

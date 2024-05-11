@@ -1,0 +1,37 @@
+.logo-container {
+    text-align: center; /* Center the image horizontally */
+  }
+  
+  .logo1 {
+    display: block; /* Ensure the image is treated as a block element */
+    margin: auto; /* Set margin auto to center the image horizontally */
+    width: 300px;
+    height: auto;
+  }
+
+.login {
+    font-family: "JosefinSans", sans-serif; /* Change Fonts */
+}
+
+.landing {
+  font-family: "Landasans", sans-serif;
+}
+
+.jumbox {
+  font-family: "Jumbox", sans-serif;
+}
+
+@font-face {
+  font-family: Jumbox;
+  src: url(../assets/Jumbox-ZVLMZ.ttf);
+}
+
+@font-face {
+  font-family: JosefinSans;
+  src: url(../assets/JosefinSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Landasans;
+  src: url(../assets/LandasansMedium-ALJ6m.otf);
+}

@@ -52,14 +52,14 @@ const LoginPage = () => {
 
         </div>
         <form onSubmit={login}>
-          <h3 className="login mt-4 fw-bold text-center mb-4">Login</h3 >
+          <h3 className="login mt-4 fw-medium text-center mb-4">Login</h3 >
           <div className="my-3 d-flex justify-content-center">
             <input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{ width: '400px', padding: '5px', border: '1px solid #ccc', borderRadius: '5px' }}
+              style={{ width: '400px', padding: '8px', border: '1px solid #ccc', borderRadius: '5px' }}
             />
           </div>
 
@@ -69,7 +69,7 @@ const LoginPage = () => {
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              style={{ width: '400px', padding: '5px', border: '1px solid #ccc', borderRadius: '5px' }}
+              style={{ width: '400px', padding: '8px', border: '1px solid #ccc', borderRadius: '5px' }}
             />
           </div>
 
@@ -77,14 +77,14 @@ const LoginPage = () => {
             <Button
               type="submit"
               className="my-3"
-              style={{ width: '70%', padding: '5px' }}
+              style={{ width: '50%', padding: '8px' }}
             >
               Login
             </Button>
           </div>
         </form>
 
-        <div className="text-center">
+        <div className="text-center mt-3">
           Don't have an account? <Link to={{ pathname: `/register` }}>Create an Account.</Link>
         </div>
       </div>
