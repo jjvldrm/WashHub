@@ -86,12 +86,10 @@ function SchedulePage() {
         try {
             await addDoc(collection(firestore, 'bookings'), bookingData);
             console.log("Booking data saved successfully");
-            // Show toast notification upon successful saving
             toast.success('Booking confirmed and saved successfully!');
-            setShowModal(false); // Close the modal after saving
+            setShowModal(false);
         } catch (error) {
             console.error("Error saving booking:", error);
-            // Show error toast notification if saving fails
             toast.error('Failed to save booking. Please try again later.');
         }
     };
