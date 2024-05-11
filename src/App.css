@@ -4,14 +4,95 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-.bg-with-image {
+.landingPage-bg-with-image {
   position: relative;
-  background-image: url("assets/carwashBg.jpg");
+  background-image: url("./assets/carwashBg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.servicePage-bg-with-image {
+  height: 100%;
+  position: relative;
+  background-image: url("./assets/ServiceBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bookPage-bg-with-image {
+  height: 100%;
+  position: relative;
+  background-image: url("./assets/bookPageBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.loginPage-bg-with-image{
+  position: relative;
+  background-image: url("./assets/loginBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gradient-bg {
+  background: linear-gradient(to bottom right, #5fa4ff, #7b8ffe);
+}
+
 .LandingPage{
-    position: relative;
     z-index: 2;
+}
+
+.line-before-after {
+  position: relative;
+}
+
+.line-before-after::before,
+.line-before-after::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: white;
+}
+
+.line-before-after::before {
+  top: -5px;
+}
+
+.line-before-after::after {
+  bottom: -5px;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+  text-decoration: none !important;
+}
+
+.service-panel {
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.service-panel.fade-out {
+  opacity: 0;
+  height: 0;
+}
+
+.pointer{
+  cursor: "pointer";
+}
+
+.loading-animation {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
 }
