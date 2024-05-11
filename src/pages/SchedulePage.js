@@ -53,8 +53,6 @@ function SchedulePage() {
         if (!user) {
             navigate('/login');
         } else {
-            const currentTime = generateTimeOptions()[0].value;
-            setSelectedTime(currentTime);
             setShowModal(true);
         }
     };
